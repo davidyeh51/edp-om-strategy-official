@@ -1,0 +1,9 @@
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.npm-cache/
+.localappdata/
+.playwright-daemon/
+.playwright-browsers/
+output/playwright/
