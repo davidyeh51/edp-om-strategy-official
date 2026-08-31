@@ -1,243 +1,673 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-Hant">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>太陽能光伏 O&M 維運策略計畫</title>
-    <meta name="description" content="2026-2029 太陽能光伏 O&M 維運策略：服務分層、地理布局、財務模型、人力規劃與里程碑驗證。" />
-    <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header" aria-label="主導覽">
-      <a class="brand" href="#top" aria-label="回到首頁">
-        <span class="brand-mark"></span>
-        <span>
-          <strong>O&M Strategy</strong>
-          <small>Solar Asset Operations</small>
-        </span>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23087354'/%3E%3Cpath d='M10 50h12V32H10zm16 0h12V20H26zm16 0h12V8H42z' fill='%231bb1bf'/%3E%3C/svg%3E">
+<title>O&M 維運策略計畫 R2.0 | Discovery-Driven Plan</title>
+<meta name="description" content="2026-2029 太陽能光伏 O&M 維運策略計畫 R2.0：服務分層、地理布局、財務模型、人力規劃與里程碑驗證。">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ================= TOP BAR ================= -->
+<div class="topbar">
+  <a class="brand" href="#home">
+    <svg class="mk" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+      <rect x="0" y="0" width="12" height="12" rx="2" fill="#087354" opacity=".9"/>
+      <rect x="14" y="0" width="12" height="12" rx="2" fill="#1BB1BF" opacity=".9"/>
+      <rect x="0" y="14" width="12" height="12" rx="2" fill="#1BB1BF" opacity=".6"/>
+      <rect x="14" y="14" width="12" height="12" rx="2" fill="#087354"/>
+    </svg>
+    <div class="tx">OM Strategy<small>Solar Asset Operations</small></div>
+  </a>
+  <nav class="topnav">
+    <a href="#home" data-nav="home">首頁</a>
+    <a href="#p1" data-nav="p1">Part 1 策略定位與財務 (3 頁)</a>
+    <a href="#p2" data-nav="p2">Part 2 服務與工程模型 (3 頁)</a>
+    <a href="#p3" data-nav="p3">Part 3 人力配置與風險 (3 頁)</a>
+  </nav>
+  <div class="meta">更新日：2026-08-31 ｜ 版本：R2.0 現行版本</div>
+</div>
+
+<!-- ================= HOME VIEW ================= -->
+<div class="view active home" id="view-home">
+  <div class="hero">
+    <div class="inner">
+      <div class="kicker">OMPLAN R2.0 ‧ 2026-2029 Discovery-Driven Plan</div>
+      <h1>太陽能光伏 O&M 維運策略計畫</h1>
+      <p class="lede">
+        以成本領導型 O&M 為核心，先定義成功的形狀，再用最小成本驗證假設。透過 M / OM / AM 三層服務、B方案拉高工程單案均值與雙軌人力模型，建立可擴張的維運事業成長路徑。
+      </p>
+      <div class="herometa">
+        <span>FY2029 目標 858 MW</span>
+        <span>四年營收 9.00億</span>
+        <span>加權均費 37.5萬/MW</span>
+        <span>AM 保證發電模式</span>
+        <span>B方案：拉高單案均值 200萬</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="homebody">
+    <div class="part-cards">
+      <a class="part-card" href="#p1-1">
+        <div class="pc-eyebrow">PART 1</div>
+        <h2>策略定位與財務</h2>
+        <p>確認事實基準與決策，呈現四年損益表與 6,000萬成長引擎的拆分，鎖定 FY2027 成長主力。</p>
+        <div class="pc-flags"><span class="chip primary">3 頁</span><span class="chip teal">損益表</span><span class="chip coral">成長引擎</span></div>
+        <div class="pc-go">進入策略定位 &rarr;</div>
       </a>
-      <nav>
-        <a href="#services">服務層級</a>
-        <a href="#geography">地理布局</a>
-        <a href="#finance">財務模型</a>
-        <a href="#people">人力規劃</a>
-        <a href="#milestones">驗證門</a>
-      </nav>
-    </header>
 
-    <main id="top">
-      <section class="hero" aria-label="策略首頁">
-        <img src="assets/solar-om-hero.png" alt="太陽能維運團隊巡檢案場" />
-        <div class="hero-shade"></div>
-        <div class="hero-content">
-          <p class="eyebrow">2026-2029 Discovery-Driven Plan</p>
-          <h1>太陽能光伏 O&M 維運策略計畫</h1>
-          <p class="lead">
-            以成本領導型 O&M 為核心，聚焦台中以南的中大型場站，透過 M / OM / AM 三層服務、PR 可稽核保證與雙軌人力模型，建立可擴張的維運事業成長路徑。
-          </p>
-          <div class="hero-actions">
-            <a href="#summary" class="primary-action">查看策略總覽</a>
-            <a href="strategy-brief.md" class="secondary-action">閱讀文字摘要</a>
+      <a class="part-card c2" href="#p2-1">
+        <div class="pc-eyebrow">PART 2</div>
+        <h2>服務層級與工程模型</h2>
+        <p>定義 M/OM/AM 服務層級，AM 佔比 0% → 40%。並說明工程 B方案 (拉高均值) 與整改工程類型。</p>
+        <div class="pc-flags"><span class="chip teal">3 頁</span><span class="chip primary">Portfolio Mix</span><span class="chip amber">工程 B方案</span></div>
+        <div class="pc-go">進入服務與工程 &rarr;</div>
+      </a>
+
+      <a class="part-card c3" href="#p3-1">
+        <div class="pc-eyebrow">PART 3</div>
+        <h2>人力配置與風險控制</h2>
+        <p>雙軌人力模型與外包策略，地理目標配比 (南部50%)，以及 FY2027 Pipeline、關鍵假設與 Gate 機制。</p>
+        <div class="pc-flags"><span class="chip amber">3 頁</span><span class="chip purple">外包策略</span><span class="chip coral">No-Go 機制</span></div>
+        <div class="pc-go">進入人力與風險 &rarr;</div>
+      </a>
+    </div>
+
+    <!-- Quick Spec Grid -->
+    <div class="quick-spec-grid">
+      <div class="metric primary">
+        <div class="k">12.0億</div>
+        <div class="t">四年總營收目標 (維運服務 67% / 維運工程 33%)</div>
+      </div>
+      <div class="metric teal">
+        <div class="k">858 MW</div>
+        <div class="t">FY2029 管理容量目標 (545 案)</div>
+      </div>
+      <div class="metric amber">
+        <div class="k">40%</div>
+        <div class="t">FY2029 AM 層級容量佔比 (由 0% 成長)</div>
+      </div>
+      <div class="metric green">
+        <div class="k">37.5萬</div>
+        <div class="t">FY2029 加權均費 / MW</div>
+      </div>
+      <div class="metric coral">
+        <div class="k">200萬</div>
+        <div class="t">FY2029 工程單案均值 (B方案目標)</div>
+      </div>
+      <div class="metric purple">
+        <div class="k">85%</div>
+        <div class="t">FY2029 例行工項外包率目標</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= PART 1: 策略定位與財務 ================= -->
+<div class="view" id="view-p1">
+  <section class="slide">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">Part 1 繚 策略定位與財務 1.1</div>
+        <h1>計畫定位與本版基準</h1>
+        <p class="sub">採用探索驅動計畫（EDP）：先定義成功的形狀，再用最小成本驗證假設。本版統整現有事實基準與已確認之策略決策。</p>
+      </div>
+      <div class="flags">
+        <span class="flag teal">事實基準</span>
+        <span class="flag primary">策略決策</span>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="two-col">
+        <div class="card primary">
+          <h3>本版已確認的事實基準（非假設）</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>項目</th><th>數值</th></tr></thead>
+              <tbody>
+                <tr><td>FY2026 營收</td><td>6,000萬 (服務4,000/工程2,000，<b>67:33</b>)</td></tr>
+                <tr class="hl-row"><td>現有管理容量</td><td><b>130 MW</b> / 140案</td></tr>
+                <tr><td>容量層級組合</td><td><b>M 20% / OM 80% / AM 0%</b></td></tr>
+                <tr><td>FY2026 工程件數</td><td>53件，均值 39萬/件</td></tr>
+                <tr><td>既有案場修理工程</td><td><b>約 560萬/年</b> (140案，約4萬/案)</td></tr>
+                <tr><td>協力商現況</td><td>清洗6家 / 高壓6家 / 除草3家 / 修繕11家</td></tr>
+                <tr class="bad-row"><td>AM 實績</td><td>保證發電合約 0件；現行AM 2案未滿12個月</td></tr>
+                <tr class="good-row"><td>資金來源</td><td><b>95% 由國泰電業提供，無預算上限</b></td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
-      </section>
+        <div class="card teal">
+          <h3>本版已確認的策略決策</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>決策項</th><th>決定</th></tr></thead>
+              <tbody>
+                <tr class="hl-row"><td>工程成長路徑</td><td><b>B方案：拉高單案均值</b> (39萬 → 200萬/件)</td></tr>
+                <tr><td>工程人力配置</td><td><b>每 2,000萬工程營收 ＝ 1名工程人員</b></td></tr>
+                <tr><td>東部市場</td><td><b>不承接</b>，專注西部</td></tr>
+                <tr class="bad-row"><td>AM 策略</td><td><b>不凍結，搶案為主</b></td></tr>
+                <tr><td>地理配比</td><td>50/30/20 為<b>目標</b> (非現況)</td></tr>
+                <tr><td>成長性質</td><td>有機成長 (Organic) 為 Base Case</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>來源：FY2027成長計畫報告 Q1~Q20 回覆</div>
+      <div class="pageno">1.1</div>
+    </div>
+  </section>
 
-      <section id="summary" class="summary-strip" aria-label="四年核心數字">
-        <article>
-          <span>四年總營收</span>
-          <strong>12.0億</strong>
-          <small>維運服務 60% / 維運工程 40%</small>
-        </article>
-        <article>
-          <span>累計淨利</span>
-          <strong>1.8億</strong>
-          <small>以 15% 淨利率倒推</small>
-        </article>
-        <article>
-          <span>管理容量</span>
-          <strong>868MW</strong>
-          <small>2029 年成熟年目標</small>
-        </article>
-        <article>
-          <span>總人力</span>
-          <strong>42人</strong>
-          <small>維運服務 35 人、工程 7 人</small>
-        </article>
-      </section>
+  <section class="slide">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">Part 1 繚 策略定位與財務 1.2</div>
+        <h1>四年損益表與毛利結構</h1>
+        <p class="sub">結構：營收 100% ─ 成本 75% ＝ 毛利 25% ─ 費用 10% ＝ 淨利 15%</p>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>損益項目</th>
+              <th class="ctr">%</th>
+              <th class="num">FY2026</th>
+              <th class="num">FY2027</th>
+              <th class="num">FY2028</th>
+              <th class="num">FY2029</th>
+              <th class="num">四年累計</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>── 維運服務收入</td><td class="ctr">(67%)</td><td class="num">4,000萬</td><td class="num">8,040萬</td><td class="num">1.61億</td><td class="num">3.22億</td><td class="num">6.03億</td>
+            </tr>
+            <tr>
+              <td>── 維運工程收入</td><td class="ctr">(33%)</td><td class="num">2,000萬</td><td class="num">3,960萬</td><td class="num">7,920萬</td><td class="num">1.58億</td><td class="num">2.97億</td>
+            </tr>
+            <tr class="hl-row">
+              <td><b>= 營業收入</b></td><td class="ctr"><b>100%</b></td><td class="num"><b>6,000萬</b></td><td class="num"><b>1.20億</b></td><td class="num"><b>2.40億</b></td><td class="num"><b>4.80億</b></td><td class="num"><b>9.00億</b></td>
+            </tr>
+            <tr>
+              <td>─ 營業成本</td><td class="ctr">75%</td><td class="num">(4,500萬)</td><td class="num">(9,000萬)</td><td class="num">(1.80億)</td><td class="num">(3.60億)</td><td class="num">(6.75億)</td>
+            </tr>
+            <tr class="good-row">
+              <td><b>= 毛利</b></td><td class="ctr"><b>25%</b></td><td class="num"><b>1,500萬</b></td><td class="num"><b>3,000萬</b></td><td class="num"><b>6,000萬</b></td><td class="num"><b>1.20億</b></td><td class="num"><b>2.25億</b></td>
+            </tr>
+            <tr>
+              <td>─ 營業費用</td><td class="ctr">10%</td><td class="num">(600萬)</td><td class="num">(1,200萬)</td><td class="num">(2,400萬)</td><td class="num">(4,800萬)</td><td class="num">(9,000萬)</td>
+            </tr>
+            <tr class="hl-row">
+              <td><b>= 稅前淨利</b></td><td class="ctr"><b>15%</b></td><td class="num"><b>900萬</b></td><td class="num"><b>1,800萬</b></td><td class="num"><b>3,600萬</b></td><td class="num"><b>7,200萬</b></td><td class="num"><b>1.35億</b></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="three-col">
+        <div class="card primary">
+          <h3>維運服務毛利</h3>
+          <p>佔總收入 50%，毛利率 30%，對整體貢獻 15.0%</p>
+        </div>
+        <div class="card teal">
+          <h3>工程修繕毛利</h3>
+          <p>佔總收入 25%，毛利率 25%，對整體貢獻 6.25%</p>
+        </div>
+        <div class="card amber">
+          <h3>維運工程毛利</h3>
+          <p>佔總收入 25%，毛利率 15%，對整體貢獻 3.75%</p>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>來源：OMPLAN R2.0 逆向財務報表</div>
+      <div class="pageno">1.2</div>
+    </div>
+  </section>
 
-      <section class="section intro-section">
-        <div class="section-copy">
-          <p class="eyebrow">Executive View</p>
-          <h2>先定義成功樣貌，再用里程碑驗證放大</h2>
+  <section class="slide">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">Part 1 繚 策略定位與財務 1.3</div>
+        <h1>FY2027 成長引擎拆分</h1>
+        <p class="sub">FY2027 新增 6,000萬營收目標，拆分為三大成長引擎，並檢視目前 Pipeline 覆蓋率。</p>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Growth Engine</th>
+              <th class="ctr">佔新增</th>
+              <th class="num">目標</th>
+              <th class="num">已辨識 Pipeline</th>
+              <th class="ctr">Coverage</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>① 既有客戶擴容／服務升級</td><td class="ctr">20%</td><td class="num">1,200萬</td><td class="num">600萬</td><td class="ctr">50.0%</td>
+            </tr>
+            <tr>
+              <td>② 新客戶簽約</td><td class="ctr">50%</td><td class="num">3,000萬</td><td class="num">1,274萬 (高信心)</td><td class="ctr">42.5%</td>
+            </tr>
+            <tr class="bad-row">
+              <td>③ 工程專案增量</td><td class="ctr">30%</td><td class="num">1,800萬</td><td class="num"><b>0萬</b></td><td class="ctr"><b>0% ⚠️</b></td>
+            </tr>
+            <tr class="hl-row">
+              <td><b>合計</b></td><td class="ctr"><b>100%</b></td><td class="num"><b>6,000萬</b></td><td class="num"><b>1,874萬</b></td><td class="ctr"><b>31.2%</b></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="big-callout">
+        <div class="label">Growth Priority #1</div>
+        <div class="answer">工程 Pipeline 建置：目標 1,800萬，目前 Pipeline 為 0。</div>
+        <div class="more">整改工程開發機制目前不存在，是 FY2027 首要克服的單一挑戰。</div>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>來源：OMPLAN R2.0 營收結構與成長引擎</div>
+      <div class="pageno">1.3</div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= PART 2: 服務層級與工程模型 ================= -->
+<div class="view" id="view-p2">
+  <section class="slide">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">Part 2 繚 服務與工程模型 2.1</div>
+        <h1>三層服務定義與 Portfolio Mix</h1>
+        <p class="sub">M/OM/AM 為服務內容深度分類，與案場規模無綁定。AM 佔比將從 0% 提升至 40%。</p>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>層級</th>
+              <th>服務內容</th>
+              <th class="num">費率</th>
+              <th>PR 承諾</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>M（維護型）</b></td>
+              <td>定期巡檢、清洗安排、故障通報與基礎排除、年度報告</td>
+              <td class="num"><b>20萬/MW/年</b></td>
+              <td>PR ≥ 80（參考，不保證）</td>
+            </tr>
+            <tr>
+              <td><b>OM（營運型）</b></td>
+              <td>M全包 ＋ 遠端監控、預防性維護、妥善率追蹤、月報</td>
+              <td class="num"><b>35萬/MW/年</b></td>
+              <td>PR ≥ 82（<b>保證</b>，未達標提改善計畫）</td>
+            </tr>
+            <tr class="hl-row">
+              <td><b>AM（資產管理型）</b></td>
+              <td>OM全包 ＋ 溫度修正PR保證、財務級月報、保證發電量合約管理</td>
+              <td class="num"><b>45萬/MW/年</b></td>
+              <td>PR ≥ 84（<b>保證＋賠償</b>）</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="split-45">
+        <div class="card coral">
+          <h3>⚠️ AM 0% → 40% 的風險提示</h3>
+          <ul>
+            <li>FY2026 AM 容量為 0%，保證發電合約 0件。</li>
+            <li>四年內要從「零實績」建立到「近半數容量」。</li>
+            <li>依 Q17：AM 不凍結、搶案為主 → 商業驗證與規模化同步進行。</li>
+            <li>此為本計畫<b>最高風險項</b>。</li>
+          </ul>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>年度</th>
+                <th class="ctr">M (20萬)</th>
+                <th class="ctr">OM (35萬)</th>
+                <th class="ctr">AM (45萬)</th>
+                <th class="num">加權均費</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><b>FY2026</b></td><td class="ctr">20%</td><td class="ctr">80%</td><td class="ctr">0%</td><td class="num">32.00萬/MW</td></tr>
+              <tr><td>FY2027</td><td class="ctr">15%</td><td class="ctr">70%</td><td class="ctr">15%</td><td class="num">34.25萬/MW</td></tr>
+              <tr><td>FY2028</td><td class="ctr">12%</td><td class="ctr">60%</td><td class="ctr">28%</td><td class="num">36.00萬/MW</td></tr>
+              <tr class="hl-row"><td><b>FY2029</b></td><td class="ctr">10%</td><td class="ctr">50%</td><td class="ctr">40%</td><td class="num">37.50萬/MW</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>來源：OMPLAN R2.0 服務層級與 Portfolio Mix</div>
+      <div class="pageno">2.1</div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">Part 2 繚 服務與工程模型 2.2</div>
+        <h1>容量與案場規劃</h1>
+        <p class="sub">四年容量成長 92% YoY，管理 858 MW、545案場。M層級案數過度集中需要對策。</p>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>年度</th>
+              <th class="num">維運服務收入</th>
+              <th class="num">加權均費</th>
+              <th class="num">總容量</th>
+              <th class="num">總案場</th>
+              <th class="ctr">M 容量/案數</th>
+              <th class="ctr">OM 容量/案數</th>
+              <th class="ctr">AM 容量/案數</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>FY2026</b></td><td class="num">4,000萬</td><td class="num">32.00萬</td><td class="num"><b>130 MW</b></td><td class="num"><b>139案</b></td>
+              <td class="ctr">26MW/104案</td><td class="ctr">104MW/35案</td><td class="ctr">0MW/0案</td>
+            </tr>
+            <tr>
+              <td><b>FY2027</b></td><td class="num">8,040萬</td><td class="num">34.25萬</td><td class="num"><b>235 MW</b></td><td class="num"><b>202案</b></td>
+              <td class="ctr">35MW/141案</td><td class="ctr">164MW/55案</td><td class="ctr">35MW/6案</td>
+            </tr>
+            <tr>
+              <td><b>FY2028</b></td><td class="num">1.61億</td><td class="num">36.00萬</td><td class="num"><b>447 MW</b></td><td class="num"><b>326案</b></td>
+              <td class="ctr">54MW/215案</td><td class="ctr">268MW/90案</td><td class="ctr">125MW/21案</td>
+            </tr>
+            <tr class="hl-row">
+              <td><b>FY2029</b></td><td class="num">3.22億</td><td class="num">37.50萬</td><td class="num"><b>858 MW</b></td><td class="num"><b>545案</b></td>
+              <td class="ctr">86MW/344案</td><td class="ctr">429MW/143案</td><td class="ctr">343MW/58案</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card amber">
+        <h3>⚠️ M 層級案數膨脹問題</h3>
+        <p>
+          FY2029：M 層級佔容量 10%、佔收入 5.3%，卻佔案場數 63% (344案)。行政與派工負擔高度集中。<br>
+          <b>管理對策（三選一）：</b><br>
+          a) 設最低承接門檻 (≥ 0.5MW)<br>
+          b) 100% 外包例行工項，內部僅保留監控<br>
+          c) 採「區域包裹式合約」
+        </p>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>來源：OMPLAN R2.0 容量與案場規劃</div>
+      <div class="pageno">2.2</div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">Part 2 繚 服務與工程模型 2.3</div>
+        <h1>工程業務模型 (B方案)</h1>
+        <p class="sub">決策採用 B方案：拉高單案均值 (39萬 → 200萬/件)。質的躍升，非量的堆疊。</p>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="split-55">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>年度</th>
+                <th class="num">工程收入</th>
+                <th class="num">目標單案均值</th>
+                <th class="num">修理工程</th>
+                <th class="num">整改工程</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>FY2026</td><td class="num">2,000萬</td><td class="num">39萬/件</td><td class="num">556萬</td><td class="num">1,424萬</td>
+              </tr>
+              <tr>
+                <td>FY2027</td><td class="num">3,960萬</td><td class="num">70萬/件</td><td class="num">808萬</td><td class="num">3,152萬</td>
+              </tr>
+              <tr>
+                <td>FY2028</td><td class="num">7,920萬</td><td class="num">130萬/件</td><td class="num">1,304萬</td><td class="num">6,616萬</td>
+              </tr>
+              <tr class="hl-row">
+                <td>FY2029</td><td class="num">1.58億</td><td class="num"><b>200萬/件</b></td><td class="num">2,180萬</td><td class="num"><b>1.37億</b></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card teal">
+          <h3>整改工程三大類型 (主動開發)</h3>
+          <ul>
+            <li><b>案場異常修理：</b>設備故障 (4萬~450萬)，被動。</li>
+            <li><b>案場 Retrofit：</b>設備升級、系統現代化 (100~300萬)，主動。</li>
+            <li><b>案場整新：</b>設備老化更新 (200~500萬)，主動。</li>
+          </ul>
+          <p>B方案實質內容：從「等異常修理」轉向「主動提案 Retrofit 與整新」。</p>
+        </div>
+      </div>
+      <div class="big-callout" style="background:linear-gradient(120deg,#1f5f8f,#0a8c66);">
+        <div class="label">交叉銷售機制</div>
+        <div class="answer">維運數據分析 → 辨識衰退 → BU 主動提案 → 整新報價</div>
+        <div class="more">目前此機制不存在，為 FY2027 必須建置的優先事項。</div>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>來源：OMPLAN R2.0 工程業務模型</div>
+      <div class="pageno">2.3</div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= PART 3: 人力配置與風險 ================= -->
+<div class="view" id="view-p3">
+  <section class="slide">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">Part 3 繚 人力配置與風險 3.1</div>
+        <h1>人力架構與外包策略</h1>
+        <p class="sub">雙軌人力標準：服務工程師 25MW/人，工程人員 2000萬營收/人。FY2029 需大量仰賴外包。</p>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="two-col">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>年度</th>
+                <th class="num">總人力</th>
+                <th class="num">維運工程</th>
+                <th class="num">維運服務</th>
+                <th class="num">外包缺口</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>FY2026</td><td class="num">19人</td><td class="num">1人(兼)</td><td class="num">15人</td><td class="num">0% (承載有餘)</td>
+              </tr>
+              <tr>
+                <td>FY2027</td><td class="num">20人</td><td class="num">2人</td><td class="num">14人</td><td class="num">0%</td>
+              </tr>
+              <tr>
+                <td>FY2028</td><td class="num">26人</td><td class="num">4人</td><td class="num">17人</td><td class="num">5% (+22MW)</td>
+              </tr>
+              <tr class="hl-row">
+                <td>FY2029</td><td class="num">34人</td><td class="num">8人</td><td class="num">20人</td><td class="num"><b>42% (+358MW)</b></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card purple">
+          <h3>外包工項與絕不外包</h3>
+          <ul>
+            <li><b>100% 外包目標：</b>清洗、高壓保養、除草、修繕。</li>
+            <li><b>60~80% 外包目標：</b>M層巡檢、工程施工人力。</li>
+            <li><b>絕不外包 (核心能力)：</b>監控異常判讀、PR分析、RCA、整改提案、AM 客戶關係、PM 管理。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>來源：OMPLAN R2.0 人力架構與外包策略</div>
+      <div class="pageno">3.1</div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">Part 3 繚 人力配置與風險 3.2</div>
+        <h1>地理布局與 Pipeline</h1>
+        <p class="sub">聚焦西部，南部核心區佔 50%。FY2027 Pipeline 尚缺 4,126萬。</p>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="split-45">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>區域</th>
+                <th class="ctr">目標佔比</th>
+                <th>現有協力商覆蓋</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><b>南部核心</b> (嘉南高屏)</td>
+                <td class="ctr"><b>50%</b></td>
+                <td>高雄✓ 台南✓ 嘉義✓ 屏東✗</td>
+              </tr>
+              <tr>
+                <td><b>中部成長</b> (中彰雲)</td>
+                <td class="ctr"><b>30%</b></td>
+                <td>台中✓ 雲林✗ 彰化✗</td>
+              </tr>
+              <tr>
+                <td><b>其他西部</b> (桃竹苗)</td>
+                <td class="ctr">20%</td>
+                <td>桃園✓</td>
+              </tr>
+              <tr class="bad-row">
+                <td><b>東部</b></td>
+                <td class="ctr">0%</td>
+                <td>不承接</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card amber">
+          <h3>FY2027 Pipeline 健檢</h3>
           <p>
-            本計畫採 EDP 探索驅動方法，將高成長目標拆成可驗證的收入、容量、費率、PR、人力與地理布局假設。每一個里程碑都對應 Go / No-Go 標準，避免在關鍵假設未成立前投入下一階段資源。
+            <b>① 既有客戶升級：</b>目標1200萬 / 缺口 600萬<br>
+            <b>② 新客戶簽約：</b>目標3000萬 / 缺口 1726萬<br>
+            <b>③ 工程專案增量：</b>目標1800萬 / <b>缺口 1800萬</b><br>
+            <br>
+            <b>合計 Coverage 僅 31.2%</b> (缺口 4,126萬)。<br>
+            判讀：FY2027 仍屬「開發問題」，未進入「交付問題」。
           </p>
         </div>
-        <div class="method-grid">
-          <article>
-            <span>01</span>
-            <h3>逆向財務報表</h3>
-            <p>從 1.8 億四年累計淨利倒推 12 億收入、25% 毛利率與 868MW 容量。</p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>關鍵假設清單</h3>
-            <p>將案源、招募、工程 SOP、平台整合與 PR84 能力列為最高優先驗證項。</p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>里程碑驗證門</h3>
-            <p>以 M0 到 M6 控制投資節奏，未通過即降級、重算或重設計畫。</p>
-          </article>
-        </div>
-      </section>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>來源：OMPLAN R2.0 地理布局與 Pipeline</div>
+      <div class="pageno">3.2</div>
+    </div>
+  </section>
 
-      <section id="services" class="section muted">
-        <div class="section-copy wide">
-          <p class="eyebrow">Service Architecture</p>
-          <h2>M / OM / AM 三層服務，對應不同 PR 承諾與風險定價</h2>
-          <p>
-            服務層級不是案場大小分類，而是客戶購買的管理深度。從基礎維護到資產管理，費率、報告深度、PR 保證與賠償責任逐級提高。
-          </p>
-        </div>
-        <div id="serviceCards" class="service-cards"></div>
-        <div class="chart-card">
-          <div class="panel-heading">
-            <div>
-              <p class="eyebrow">Portfolio Mix</p>
-              <h3>AM 佔比從 12% 提升到 30%，推動加權均費上升</h3>
-            </div>
-          </div>
-          <div id="portfolioChart" class="stacked-chart"></div>
-        </div>
-      </section>
+  <section class="slide">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">Part 3 繚 人力配置與風險 3.3</div>
+        <h1>關鍵假設、里程碑與收斂機制</h1>
+        <p class="sub">最高優先驗證假設與 Gate 門檻，未達標則啟動 No-Go 機制。</p>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>里程碑 Gate</th>
+              <th>截止</th>
+              <th>核心行動與 Go 標準</th>
+              <th>No-Go 處置 (收斂機制)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>M1 整改工程機制</b></td>
+              <td>2026/Q4</td>
+              <td>建立商機報價流程，產出首批 ≥5 件提案</td>
+              <td>工程成長改為保守，FY2027 下修至 2,800萬</td>
+            </tr>
+            <tr class="hl-row">
+              <td><b>M5 AM Scale-up</b></td>
+              <td>2027/Q2</td>
+              <td>建坤自益案完成 12 個月週期驗證，五項全過</td>
+              <td>新簽 AM 採保守賠償上限，AM 佔比目標下修</td>
+            </tr>
+            <tr>
+              <td><b>M7 交付能力 Gate</b></td>
+              <td>2028/Q3</td>
+              <td>外包率 ≥75%、抽查合格率 ≥90%</td>
+              <td>停止新增超出交付能力的案件 (第三層止血)</td>
+            </tr>
+            <tr class="bad-row">
+              <td><b>資金單一風險</b></td>
+              <td>隨時</td>
+              <td>95% 資金來自國泰電業，需書面撥付條件</td>
+              <td>若發生資金抽離，啟動第四層組織收斂</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card coral">
+        <h3>收斂／No-Go 機制 (若營收 &lt; 70%)</h3>
+        <p>優先停止尚未驗證的成長 → 再凍結高風險產品 (AM) → 控制新增交付 → 最後調整既有 M/OM 核心。<br>核心目的：保護現金流、毛利與既有客戶續約。</p>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>來源：OMPLAN R2.0 里程碑與收斂機制</div>
+      <div class="pageno">3.3</div>
+    </div>
+  </section>
+</div>
 
-      <section id="geography" class="section">
-        <div class="split">
-          <div class="section-copy">
-            <p class="eyebrow">Geographic Focus</p>
-            <h2>台中以南集中布局，將服務密度轉為成本優勢</h2>
-            <p>
-              南部重點區承擔 AM 層級主戰場，中部成長區承接 OM 主力，北部維持既有客戶不主動擴張。到 2029 年，台中以南容量預計達 677MW，約佔整體 78%。
-            </p>
-          </div>
-          <div class="map-card" aria-label="區域容量策略">
-            <div class="region south">
-              <strong>45%</strong>
-              <span>南部重點區</span>
-              <small>台南 / 高雄 / 屏東</small>
-            </div>
-            <div class="region central">
-              <strong>33%</strong>
-              <span>中部成長區</span>
-              <small>彰化 / 雲林 / 嘉義 / 台中</small>
-            </div>
-            <div class="region north">
-              <strong>22%</strong>
-              <span>北部維持區</span>
-              <small>桃園 / 新竹 / 台北</small>
-            </div>
-          </div>
-        </div>
-        <div class="chart-card">
-          <div class="panel-heading">
-            <div>
-              <p class="eyebrow">Capacity by Region</p>
-              <h3>四年區域容量配置</h3>
-            </div>
-          </div>
-          <div id="regionChart" class="vertical-bars"></div>
-        </div>
-      </section>
+<!-- ================= BOTTOM CONTROLS ================= -->
+<div class="deckbar" id="deckbar">
+  <div class="progress"><div class="fill" id="progressFill"></div></div>
+  <div class="hint">按左右方向鍵切換 ｜ 按 F 進入全螢幕</div>
+  <div class="ctrl">
+    <span class="counter" id="counter">1 / 1</span>
+    <button id="btnPrev" aria-label="上一頁">&lt;</button>
+    <button id="btnNext" aria-label="下一頁">&gt;</button>
+  </div>
+</div>
 
-      <section id="finance" class="section dark-section">
-        <div class="section-copy wide">
-          <p class="eyebrow">Financial Model</p>
-          <h2>12 億營收、25% 毛利率、15% 淨利率</h2>
-          <p>
-            維運服務收入與維運工程收入共同支撐成長曲線。財務模型把毛利、費用、投資與容量需求明確連動，方便管理層用同一組 KPI 回測。
-          </p>
-        </div>
-        <div class="finance-grid">
-          <div class="finance-panel">
-            <h3>損益成長軌跡</h3>
-            <div id="incomeChart" class="line-bars"></div>
-          </div>
-          <div class="finance-panel">
-            <h3>成本與利潤結構</h3>
-            <div id="marginChart" class="margin-bars"></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-copy wide">
-          <p class="eyebrow">Operations Scale</p>
-          <h2>容量、案場與工程件數同步放大</h2>
-          <p>
-            2028 年是最大轉折：總容量接近翻倍、案場數達 580 案、工程件數達 32 件。2029 年案場數略降但容量續增，代表組合轉向較大案場與 AM/OM 層級。
-          </p>
-        </div>
-        <div class="ops-grid">
-          <div class="chart-card">
-            <h3>總管理容量</h3>
-            <div id="capacityChart" class="vertical-bars compact"></div>
-          </div>
-          <div class="chart-card">
-            <h3>案場與工程件數</h3>
-            <div id="siteProjectChart" class="table-visual"></div>
-          </div>
-        </div>
-      </section>
-
-      <section id="people" class="section muted">
-        <div class="split">
-          <div class="section-copy">
-            <p class="eyebrow">People Model</p>
-            <h2>雙軌人力模型：容量制與專案制分開管理</h2>
-            <p>
-              維運服務工程師以 25MW / 人 / 年估算，維運工程工程師以 3,000 萬收入 / 人 / 年估算。2028 年新增 17 人是全計畫最大執行挑戰。
-            </p>
-          </div>
-          <div class="challenge-card">
-            <span>最大挑戰</span>
-            <strong>2028 年 +17 人</strong>
-            <p>必須在 2027 Q4 前建立招募管線，2028 Q1 前至少 8 人到職，否則容量目標需下修。</p>
-          </div>
-        </div>
-        <div class="chart-card">
-          <div id="peopleChart" class="people-chart"></div>
-        </div>
-      </section>
-
-      <section id="milestones" class="section">
-        <div class="section-copy wide">
-          <p class="eyebrow">Validation Gates</p>
-          <h2>不通過驗證，不跨越里程碑</h2>
-          <p>
-            里程碑設計讓策略可以被管理：每一步都有負責的驗證對象、通過標準與失敗處置，避免用年度預算掩蓋假設風險。
-          </p>
-        </div>
-        <div id="riskCards" class="risk-cards"></div>
-        <div id="milestoneList" class="milestone-list"></div>
-      </section>
-
-      <section class="cta-section">
-        <div>
-          <p class="eyebrow">Boardroom Ready</p>
-          <h2>以同一張策略圖，對齊管理層、客戶與執行團隊</h2>
-          <p>內容聚焦正式策略、核心數字、視覺化圖表與可執行驗證節點，適合管理層與客戶快速對齊。</p>
-        </div>
-        <a href="strategy-brief.md" class="primary-action">下載摘要內容</a>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <span>Solar O&M Strategy 2026-2029</span>
-      <span>Discovery-Driven Planning</span>
-    </footer>
-
-    <script src="app.js"></script>
-  </body>
+<script src="app.js"></script>
+</body>
 </html>
