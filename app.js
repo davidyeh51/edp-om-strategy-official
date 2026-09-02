@@ -3,16 +3,18 @@
   var parts = {
     p1: [].slice.call(document.querySelectorAll('#view-p1 .slide')),
     p2: [].slice.call(document.querySelectorAll('#view-p2 .slide')),
-    p3: [].slice.call(document.querySelectorAll('#view-p3 .slide'))
+    p3: [].slice.call(document.querySelectorAll('#view-p3 .slide')),
+    p4: [].slice.call(document.querySelectorAll('#view-p4 .slide'))
   };
-  var order = ['p1','p2','p3'];
+  var order = ['p1','p2','p3','p4'];
   var state = { view:'home', idx:0 };
-  var last = { p1:0, p2:0, p3:0 };
+  var last = { p1:0, p2:0, p3:0, p4:0 };
   var views = {
     home: document.getElementById('view-home'),
     p1: document.getElementById('view-p1'),
     p2: document.getElementById('view-p2'),
-    p3: document.getElementById('view-p3')
+    p3: document.getElementById('view-p3'),
+    p4: document.getElementById('view-p4')
   };
   var deckbar = document.getElementById('deckbar');
   var fill = document.getElementById('progressFill');
@@ -44,7 +46,7 @@
   function goHash(hash){
     hash = (hash||'#home').replace('#','');
     if(hash==='home'||hash===''){ state.view='home'; render(); return; }
-    var m = hash.match(/^(p1|p2|p3)-(\d+)$/);
+    var m = hash.match(/^(p1|p2|p3|p4)-(\d+)$/);
     if(m){
       var v=m[1], i=parseInt(m[2],10)-1;
       if(parts[v] && parts[v][i]){ state.view=v; state.idx=i; render(); return; }

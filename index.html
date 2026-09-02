@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23087354'/%3E%3Cpath d='M10 50h12V32H10zm16 0h12V20H26zm16 0h12V8H42z' fill='%231bb1bf'/%3E%3C/svg%3E">
-<title>O&M 維運策略計畫 R3.0 | BP 會議修正版</title>
-<meta name="description" content="2026-2029 太陽能光伏 O&M 維運策略計畫 R3.0：四層服務、單案成本法、SD訂單與已確認參數。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231968AD'/%3E%3Cpath d='M10 50h12V32H10zm16 0h12V20H26zm16 0h12V8H42z' fill='%231bb1bf'/%3E%3C/svg%3E">
+<title>O&M 維運策略計畫 R4.0 | 定價與損益修正版</title>
+<meta name="description" content="2026-2029 太陽能光伏 O&M 維運策略計畫 R4.0：PR 保證三情境、AM 定價、雙層費用損益表。">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,37 +14,38 @@
 <div class="topbar">
   <a class="brand" href="#home">
     <svg class="mk" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
-      <rect x="0" y="0" width="12" height="12" rx="2" fill="#087354" opacity=".9"/>
+      <rect x="0" y="0" width="12" height="12" rx="2" fill="#1968AD" opacity=".9"/>
       <rect x="14" y="0" width="12" height="12" rx="2" fill="#1BB1BF" opacity=".9"/>
       <rect x="0" y="14" width="12" height="12" rx="2" fill="#1BB1BF" opacity=".6"/>
-      <rect x="14" y="14" width="12" height="12" rx="2" fill="#087354"/>
+      <rect x="14" y="14" width="12" height="12" rx="2" fill="#1968AD"/>
     </svg>
     <div class="tx">OM Strategy<small>Solar Asset Operations</small></div>
   </a>
   <nav class="topnav">
     <a href="#home" data-nav="home">首頁</a>
-    <a href="#p1" data-nav="p1">Part 1 R3.0 變更與財務 (3 頁)</a>
-    <a href="#p2" data-nav="p2">Part 2 服務容量與成本 (3 頁)</a>
-    <a href="#p3" data-nav="p3">Part 3 人力配置與風險 (3 頁)</a>
+    <a href="#p1" data-nav="p1">Part 1 R4.0 變更與服務定價 (3 頁)</a>
+    <a href="#p2" data-nav="p2">Part 2 財務損益與接單門檻 (3 頁)</a>
+    <a href="#p3" data-nav="p3">Part 3 容量、工程與人力 (3 頁)</a>
+    <a href="#p4" data-nav="p4">Part 4 里程碑與參數 (2 頁)</a>
   </nav>
-  <div class="meta">更新日：2026-08-31 ｜ 版本：R3.0 現行版本 ✅ 參數已確認</div>
+  <div class="meta">更新日：2026-08-31 ｜ 版本：R4.0 現行版本</div>
 </div>
 
 <!-- ================= HOME VIEW ================= -->
 <div class="view active home" id="view-home">
-  <div class="hero">
+  <div class="hero" style="background: linear-gradient(135deg, var(--blue-dd), var(--blue)), url('assets/solar-om-hero.jpg') center/cover; background-blend-mode: overlay;">
     <div class="inner">
-      <div class="kicker">OMPLAN R3.0 ‧ 2026-2029 BP 會議修正版</div>
+      <div class="kicker">OMPLAN R4.0 ‧ 2026-2029 定價與損益修正版</div>
       <h1>太陽能光伏 O&M 維運策略計畫</h1>
       <p class="lede">
-        依據 FY2027 BP 討論會議更新。本版納入服務層級重定義 (M/OM-1/OM-2/AM)、浮動定價機制、PR責任移轉至 EPC、單案成本法與分析模組驅動的 SD 訂單邏輯。
+        依據 R3.0 討論後補充修正。本版納入 PR 保證三情境、AM 國泰定價與分潤、雙層營業費用（淨利 10%）、與統一 800kW 單案門檻。
       </p>
       <div class="herometa">
-        <span>FY2029 目標 901 MW</span>
+        <span>FY2029 目標 952 MW</span>
         <span>四年營收 9.00億</span>
-        <span>OM 浮動定價 6%/8%</span>
-        <span>PR扣款移轉 EPC</span>
-        <span>單案成本目標 5,000元</span>
+        <span>雙層費用 10%+5%</span>
+        <span>PR 賠付三情境</span>
+        <span>案場基準 800kW</span>
       </div>
     </div>
   </div>
@@ -53,104 +54,108 @@
     <div class="part-cards">
       <a class="part-card" href="#p1-1">
         <div class="pc-eyebrow">PART 1</div>
-        <h2>R3.0 變更與財務</h2>
-        <p>檢視 R3.0 的重大變更、四層服務定義 (M/OM-1/OM-2/AM) 與浮動定價，以及四年損益表。</p>
-        <div class="pc-flags"><span class="chip primary">3 頁</span><span class="chip teal">浮動定價</span><span class="chip coral">PR 移轉</span></div>
-        <div class="pc-go">進入 R3.0 變更 &rarr;</div>
+        <h2>R4.0 變更與服務定價</h2>
+        <p>檢視 R4.0 重大變更、PR 保證的三種商業情境，以及服務層級與定價結構。</p>
+        <div class="pc-flags"><span class="chip blue">3 頁</span><span class="chip teal">PR 情境</span><span class="chip coral">AM 定價</span></div>
+        <div class="pc-go">進入 R4.0 變更 &rarr;</div>
       </a>
 
       <a class="part-card c2" href="#p2-1">
         <div class="pc-eyebrow">PART 2</div>
-        <h2>服務容量與成本模型</h2>
-        <p>容量案場演進 (OM-1/OM-2 切分)、新增單案成本法管理工具，與分析模組驅動 SD 訂單的邏輯。</p>
-        <div class="pc-flags"><span class="chip teal">3 頁</span><span class="chip primary">單案成本法</span><span class="chip amber">SD 訂單</span></div>
-        <div class="pc-go">進入容量與成本 &rarr;</div>
+        <h2>財務損益與接單門檻</h2>
+        <p>AM 分潤機制、接單門檻規則（6%收入 vs 單案成本），以及雙層費用的四年損益表。</p>
+        <div class="pc-flags"><span class="chip teal">3 頁</span><span class="chip blue">損益表</span><span class="chip amber">接單門檻</span></div>
+        <div class="pc-go">進入財務損益 &rarr;</div>
       </a>
 
       <a class="part-card c3" href="#p3-1">
         <div class="pc-eyebrow">PART 3</div>
-        <h2>人力配置與風險控制</h2>
-        <p>雙軌人力與外包策略，關鍵假設、驗證門機制，以及已確認的 3 項參數更新。</p>
-        <div class="pc-flags"><span class="chip amber">3 頁</span><span class="chip purple">外包策略</span><span class="chip coral">參數已確認</span></div>
-        <div class="pc-go">進入人力與風險 &rarr;</div>
+        <h2>容量、工程與人力</h2>
+        <p>容量案場演進、單案成本法、分析模組驅動 SD 訂單邏輯，與人力外包缺口。</p>
+        <div class="pc-flags"><span class="chip amber">3 頁</span><span class="chip purple">外包缺口</span><span class="chip coral">SD 訂單</span></div>
+        <div class="pc-go">進入容量與人力 &rarr;</div>
+      </a>
+      
+      <a class="part-card c4" href="#p4-1" style="border-top-color:var(--coral)">
+        <div class="pc-eyebrow" style="color:var(--coral)">PART 4</div>
+        <h2>里程碑與未確認參數</h2>
+        <p>關鍵假設、十一大里程碑 Gate 機制，以及需優先釐清的 5 項未確認參數。</p>
+        <div class="pc-flags"><span class="chip coral">2 頁</span><span class="chip blue">Gate 機制</span></div>
+        <div class="pc-go">進入里程碑 &rarr;</div>
       </a>
     </div>
 
     <!-- Quick Spec Grid -->
     <div class="quick-spec-grid">
-      <div class="metric primary">
-        <div class="k">12.0億</div>
+      <div class="metric blue">
+        <div class="k">9.00億</div>
         <div class="t">四年總營收目標 (服務 70% / 工程 30%)</div>
       </div>
       <div class="metric teal">
-        <div class="k">901 MW</div>
-        <div class="t">FY2029 管理容量目標 (604 案)</div>
+        <div class="k">0.90億</div>
+        <div class="t">四年累計淨利 (淨利率 10%)</div>
       </div>
       <div class="metric amber">
         <div class="k">6% / 8%</div>
         <div class="t">OM-1 / OM-2 浮動定價 (售電收入佔比)</div>
       </div>
       <div class="metric green">
-        <div class="k">5,000元</div>
-        <div class="t">單案成本法長期目標 (元/案/月)</div>
+        <div class="k">800kW</div>
+        <div class="t">單案規模基準 (過小案場排除承接)</div>
       </div>
       <div class="metric coral">
-        <div class="k">1.20億</div>
+        <div class="k">9,640萬</div>
         <div class="t">FY2029 SD 訂單營收目標 (工程主力)</div>
       </div>
       <div class="metric purple">
-        <div class="k">45%</div>
-        <div class="t">FY2029 必須外包比例 (缺口 401MW)</div>
+        <div class="k">47%</div>
+        <div class="t">FY2029 必須外包比例 (缺口 452MW)</div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ================= PART 1: R3.0 變更與財務 ================= -->
+<!-- ================= PART 1: R4.0 變更與服務定價 ================= -->
 <div class="view" id="view-p1">
   <section class="slide">
     <div class="slide-header">
       <div>
-        <div class="eyebrow">Part 1 繚 R3.0 變更與財務 1.1</div>
+        <div class="eyebrow">Part 1 繚 R4.0 變更與服務定價 1.1</div>
         <h1>本版變更摘要與重大變化</h1>
-        <p class="sub">依據 2026-08-31 BP 會議，本版在服務層級、定價機制與風險歸屬上發生了本質性的變化。</p>
+        <p class="sub">R4.0 在 PR 責任、AM 定價與營業費用結構上進行了大幅修正，影響淨利與案場規模。</p>
       </div>
       <div class="flags">
         <span class="flag teal">重大變更</span>
-        <span class="flag primary">風險移轉</span>
       </div>
     </div>
     <div class="slide-body">
       <div class="table-wrap">
         <table>
-          <thead><tr><th>項目</th><th>R2.0</th><th>R3.0 變更</th></tr></thead>
+          <thead><tr><th>項目</th><th>R3.0</th><th>R4.0 變更</th></tr></thead>
           <tbody>
-            <tr class="hl-row"><td>服務層級</td><td>三層 M/OM/AM</td><td><b>四層 M/OM-1/OM-2/AM</b> (OM分保與不保PR)</td></tr>
-            <tr><td>M 定義與費率</td><td>含查修，20萬/MW</td><td><b>僅巡檢+清洗+報告</b>，15萬/MW</td></tr>
-            <tr class="hl-row"><td>OM 定價機制</td><td>固定 35萬/MW</td><td><b>售電收入 6% (不保) / 8% (保PR)</b></td></tr>
-            <tr class="good-row"><td>PR 責任</td><td>AM 承擔賠償</td><td><b>PR 扣款由 EPC 承擔，OM 不負責</b></td></tr>
-            <tr><td>AM 定價</td><td>45萬固定</td><td><b>分潤制</b> (參照國泰模式)</td></tr>
-            <tr><td>營收拆分</td><td>67 : 33</td><td><b>FY2027起 70 : 30</b></td></tr>
-            <tr><td>工程機制</td><td>尚未建立</td><td><b>分析模組 → 預判故障 → SD 訂單</b></td></tr>
-            <tr><td>新管理工具</td><td>無</td><td><b>單案成本法 (1萬元/案/月)</b></td></tr>
+            <tr class="hl-row"><td>PR 保證架構</td><td>單一情境（由 EPC 承擔）</td><td><b>三情境：EPC賠付／OM自管無賠償／OM自管有賠償</b></td></tr>
+            <tr><td>AM 定價</td><td>分潤制 (細則待定)</td><td><b>前五年350元/kW，後十五年600元/kW；DY ±3%</b></td></tr>
+            <tr class="hl-row"><td>營業費用</td><td>單層 10%</td><td><b>雙層：事業部 10% ＋ 公司 5%</b></td></tr>
+            <tr class="bad-row"><td>淨利率 & 四年淨利</td><td>15% / 1.35億</td><td><b>10% / 0.90億</b>（受公司費用 5% 影響）</td></tr>
+            <tr><td>平均案場規模</td><td>分層 0.25~6.0 MW</td><td><b>一律 800 kW/案</b>（反映新案趨向中小型）</td></tr>
+            <tr><td>接單門檻</td><td>未定義</td><td><b>6% 收入 &lt; 單案成本者排除</b>（約 400kW 以下）</td></tr>
+            <tr class="good-row"><td>四年總營收</td><td>9.0億</td><td><b>9.0億</b>（確認無誤）</td></tr>
           </tbody>
         </table>
       </div>
       <div class="two-col">
-        <div class="card green">
-          <h3>① 賠償風險大幅下降</h3>
-          <p>PR 未達標扣款移轉至 EPC。<br>
-          R2.0 的最高風險（AM零實績下承擔賠償）實質消失。但代價是：AM 的定價正當性需重新論述，憑什麼比 OM 貴？</p>
+        <div class="card blue">
+          <h3>① 淨利腰斬與費用雙層化</h3>
+          <p>公司層級費用 5% 納入後，淨利率從 15% 降為 10%。四年累計淨利從 1.35 億降至 0.90 億。</p>
         </div>
         <div class="card amber">
-          <h3>② 定價改為「浮動」的新風險</h3>
-          <p>6%/8% 綁定售電收入，營收會隨日照年份、電價變動而波動。<br>
-          新增變數：年度日照變異直接影響營收；舊案高費率、新案低費率造成同 MW 收入不同。</p>
+          <h3>② 案場數大增與管理壓力</h3>
+          <p>統一 800kW 案場基準後，FY2029 案場數高達 1,190 案 (+97%)。人均案場突破 40 案上限，大幅依賴外包。</p>
         </div>
       </div>
     </div>
     <div class="slide-foot">
-      <div>來源：OMPLAN R3.0 本版變更摘要</div>
+      <div>來源：OMPLAN R4.0 本版變更摘要</div>
       <div class="pageno">1.1</div>
     </div>
   </section>
@@ -158,9 +163,64 @@
   <section class="slide">
     <div class="slide-header">
       <div>
-        <div class="eyebrow">Part 1 繚 R3.0 變更與財務 1.2</div>
-        <h1>服務層級重新定義（四層）</h1>
-        <p class="sub">M 類服務明確排除監控與查修；OM-2 雖保證 PR，但扣款責任在 EPC。</p>
+        <div class="eyebrow">Part 1 繚 R4.0 變更與服務定價 1.2</div>
+        <h1>PR 保證三情境</h1>
+        <p class="sub">將 PR 保證細分為三種商業情境，明確「風險承擔者」與「維運方定價」。</p>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>情境</th>
+              <th>誰管理 PR</th>
+              <th>未達標時賠償責任</th>
+              <th>對應層級與收費</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hl-row">
+              <td><b>情境一：EPC 承擔</b></td>
+              <td>設計與建置決定 PR 上限</td>
+              <td><b>EPC 賠償給維運單位</b></td>
+              <td>OM-2 / AM (維持維運方收入)</td>
+            </tr>
+            <tr>
+              <td><b>情境二A：OM 自管、無賠償</b></td>
+              <td>維運單位管理</td>
+              <td>無賠償責任</td>
+              <td><b>OM-1 (收 6%)</b></td>
+            </tr>
+            <tr>
+              <td><b>情境二B：OM 自管、有賠償</b></td>
+              <td>維運單位管理</td>
+              <td>依約賠償客戶</td>
+              <td><b>OM-2 (收 8%)</b></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card teal">
+        <h3>2% 價差的定價邏輯（風險對價）</h3>
+        <p>
+          OM-1 (6%) 與 OM-2 (8%) 的 2% 價差，是「承擔 PR 賠償責任」的風險對價。<br>
+          這筆額外的營收用於：主動增加清洗頻次提升 PR、賠償準備金（自保）、以及監控與分析投入。客戶若要求 PR 保證，就是明碼標價多付 2%。
+        </p>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>來源：OMPLAN R4.0 PR 保證三情境</div>
+      <div class="pageno">1.2</div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">Part 1 繚 R4.0 變更與服務定價 1.3</div>
+        <h1>服務層級與定價結構</h1>
+        <p class="sub">AM 在前五年的單價 (35萬/MW) 反而低於 OM-2 (43萬/MW)，價值在於長約與後段。</p>
       </div>
     </div>
     <div class="slide-body">
@@ -171,69 +231,174 @@
               <th>層級</th>
               <th>服務內容</th>
               <th class="num">定價</th>
-              <th>PR 承諾</th>
+              <th>PR 情境</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td><b>M（維護型）</b></td>
-              <td><b>僅</b>定期巡檢、定期清洗、出具報告</td>
-              <td class="num"><b>150元/kW/年</b><br>(≈15萬/MW)</td>
-              <td>PR 僅供參考，不保證</td>
+              <td>僅巡檢、清洗＋報告</td>
+              <td class="num"><b>150元/kW/年</b> (15萬/MW)</td>
+              <td>不涉及</td>
             </tr>
             <tr>
               <td><b>OM-1（營運 不保PR）</b></td>
-              <td>M ＋ 異常故障查修、監控值守、KPI追蹤、月報</td>
-              <td class="num"><b>售電收入 6%</b><br>(≈32萬/MW)</td>
-              <td>不保證</td>
+              <td>M ＋ 故障查修、監控、月報</td>
+              <td class="num"><b>售電收入 6%</b> (≈32萬/MW)</td>
+              <td>情境二A</td>
             </tr>
             <tr class="hl-row">
               <td><b>OM-2（營運 保PR）</b></td>
-              <td>OM-1 全包 ＋ 增加清洗頻次等增值服務</td>
-              <td class="num"><b>售電收入 8%</b><br>(≈43萬/MW)</td>
-              <td>保證<br>(<b>扣款責任在 EPC</b>)</td>
+              <td>OM-1 ＋ 增加清洗頻次等增值</td>
+              <td class="num"><b>售電收入 8%</b> (≈43萬/MW)</td>
+              <td>情境二B (含賠償責任)</td>
             </tr>
             <tr>
               <td><b>AM（資產管理型）</b></td>
               <td>資產績效管理、分潤機制</td>
-              <td class="num"><b>分潤制</b></td>
+              <td class="num"><b>前五年 350元/kW</b><br><b>後十五年 600元/kW</b></td>
               <td>依分潤合約</td>
             </tr>
           </tbody>
         </table>
       </div>
-      <div class="split-45">
-        <div class="card">
-          <h3>M 類排除項與保固案統計</h3>
-          <ul>
-            <li><b>不含監控、查修：</b>這是 OM-1 的差異化起點。</li>
-            <li><b>納入 M 類：</b>含年2次巡檢的保固案 (如益升)。</li>
-            <li><b>不納入 M 類：</b>純保固 (無例行巡檢清洗)。</li>
-          </ul>
-        </div>
-        <div class="card teal">
-          <h3>PR 責任移轉邏輯 (會議決議)</h3>
-          <p>
-            <b>產業類比：</b>只有掌握設備選型，才能穩定保障運行。<br>
-            <b>光伏現況：</b>設備規格過多 (多品牌、多世代) 是 PR 保障難度大的核心。在不掌握選型權下承擔 PR，是承擔無法控制的風險。<br>
-            <br>
-            OM 交付基準：僅需確保完成約定的巡檢、清洗、查修。
-          </p>
-        </div>
+      <div class="card coral">
+        <h3>⚠️ 費率結構的反直覺處 (AM 單價低)</h3>
+        <p>
+          AM 在前五年單價 (35萬) 低於 OM-2 (43萬)，因此在 FY26-29 的四年窗口內，<b>提高 AM 佔比會拉低平均費率</b>。<br>
+          AM 的真正價值在於：後十五年 600元/kW (71% 溢價)、20年長約鎖定客戶、以及分潤的上檔空間。因此 AM 需用「20 年期 IRR」評估，而非四年期單價。
+        </p>
       </div>
     </div>
     <div class="slide-foot">
-      <div>來源：OMPLAN R3.0 服務層級重新定義</div>
-      <div class="pageno">1.2</div>
+      <div>來源：OMPLAN R4.0 服務層級與定價</div>
+      <div class="pageno">1.3</div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= PART 2: 財務損益與接單門檻 ================= -->
+<div class="view" id="view-p2">
+  <section class="slide">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">Part 2 繚 財務損益與接單門檻 2.1</div>
+        <h1>AM 國泰電業定價與分潤模式</h1>
+        <p class="sub">明確 DY (發電達成率) 的財務責任歸屬：超額與短收皆與維運方無關。</p>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="split-45">
+        <div class="card blue">
+          <h3>AM 20 年合約價值結構</h3>
+          <ul>
+            <li><b>前五年：</b> 35萬/MW × 5年 = 175萬</li>
+            <li><b>後十五年：</b> 60萬/MW × 15年 = 900萬</li>
+            <li><b>總計：</b> 1,075萬/MW (年均 53.75萬)</li>
+          </ul>
+          <p>對照 OM-2 (43萬)，AM 年均高出 25%，是「先低後高」的長約結構。</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>DY 值區間</th>
+                <th>收益／賠償歸屬</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><b>基準 ±3% 以內</b></td>
+                <td><b>屬國泰</b>（維運方收固定費）</td>
+              </tr>
+              <tr class="hl-row">
+                <td><b>> +3% (超額發電)</b></td>
+                <td><b>EPC 獲利</b>（維運方不參與分潤）</td>
+              </tr>
+              <tr class="bad-row">
+                <td><b>&lt; -3% (短收)</b></td>
+                <td><b>EPC 賠償</b>（維運方不承擔）</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card amber" style="margin-top:20px;">
+        <h3>風險提示：無財務誘因與內部風險移轉</h3>
+        <p>維運單位在此結構中是「收固定服務費的執行方」，DY 做好做壞收一樣。<br>若 EPC 為關係企業，超額與短收實質上是集團內部的風險移轉，並非真正對外避險。</p>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>來源：OMPLAN R4.0 AM 國泰電業分潤</div>
+      <div class="pageno">2.1</div>
     </div>
   </section>
 
   <section class="slide">
     <div class="slide-header">
       <div>
-        <div class="eyebrow">Part 1 繚 R3.0 變更與財務 1.3</div>
-        <h1>四年損益表與營收結構 (70:30)</h1>
-        <p class="sub">營收目標維持四年 12 億，服務與工程佔比調整為 70 : 30。</p>
+        <div class="eyebrow">Part 2 繚 財務損益與接單門檻 2.2</div>
+        <h1>接單門檻規則</h1>
+        <p class="sub">若案場的「售電收入 6%」低於單案服務成本（約12萬/年），則不符經濟效益。</p>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>案場容量</th>
+              <th class="num">年售電收入</th>
+              <th class="num">6% 收入</th>
+              <th class="num">8% 收入</th>
+              <th>承接判定</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bad-row">
+              <td>300 kW</td><td class="num">161萬</td><td class="num"><b>9.7萬</b></td><td class="num">12.9萬</td>
+              <td>❌ <b>排除</b> (低於 12 萬成本)</td>
+            </tr>
+            <tr>
+              <td>500 kW</td><td class="num">269萬</td><td class="num">16.1萬</td><td class="num">21.5萬</td>
+              <td>✅ 個案評估</td>
+            </tr>
+            <tr class="hl-row">
+              <td><b>620 kW</b></td><td class="num">333萬</td><td class="num"><b>20.0萬</b></td><td class="num">26.7萬</td>
+              <td>✅ <b>經濟門檻</b> (達成本 1.67 倍)</td>
+            </tr>
+            <tr>
+              <td><b>800 kW</b></td><td class="num">430萬</td><td class="num">25.8萬</td><td class="num">34.4萬</td>
+              <td>✅ <b>可接 (本版基準)</b></td>
+            </tr>
+            <tr>
+              <td>1,000 kW</td><td class="num">538萬</td><td class="num">32.2萬</td><td class="num">43.0萬</td>
+              <td>✅ 可接</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card teal">
+        <h3>承接政策與 M 層膨脹解法</h3>
+        <p>
+          <b>&lt; 400 kW：</b>原則不接，除非客戶補貼成本或區域包裹。<br>
+          <b>東部區域：</b>零散小案全外包或補貼成本。<br>
+          此規則同時解決「M 層案數膨脹」問題：排除小案後，平均規模自然拉高，行政與派工負擔下降。
+        </p>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>來源：OMPLAN R4.0 接單門檻規則</div>
+      <div class="pageno">2.2</div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">Part 2 繚 財務損益與接單門檻 2.3</div>
+        <h1>雙層費用損益表 (淨利 10%)</h1>
+        <p class="sub">事業部營業利益 15% 為對內績效；稅前淨利 10% (扣除公司費用) 為對上貢獻。</p>
       </div>
     </div>
     <div class="slide-body">
@@ -252,53 +417,52 @@
           </thead>
           <tbody>
             <tr>
-              <td>── 維運服務收入 (70%)</td><td class="ctr">70%</td><td class="num">4,000萬</td><td class="num">8,400萬</td><td class="num">1.68億</td><td class="num">3.36億</td><td class="num">6.28億</td>
-            </tr>
-            <tr>
-              <td>── 維運工程收入 (30%)</td><td class="ctr">30%</td><td class="num">2,000萬</td><td class="num">3,600萬</td><td class="num">7,200萬</td><td class="num">1.44億</td><td class="num">2.72億</td>
-            </tr>
-            <tr class="hl-row">
-              <td><b>= 營業收入</b></td><td class="ctr"><b>100%</b></td><td class="num"><b>6,000萬</b></td><td class="num"><b>1.20億</b></td><td class="num"><b>2.40億</b></td><td class="num"><b>4.80億</b></td><td class="num"><b>9.00億</b></td>
+              <td><b>= 營業收入</b></td><td class="ctr">100%</td><td class="num">6,000萬</td><td class="num">1.20億</td><td class="num">2.40億</td><td class="num">4.80億</td><td class="num">9.00億</td>
             </tr>
             <tr>
               <td>─ 營業成本</td><td class="ctr">75%</td><td class="num">(4,500萬)</td><td class="num">(9,000萬)</td><td class="num">(1.80億)</td><td class="num">(3.60億)</td><td class="num">(6.75億)</td>
             </tr>
-            <tr class="good-row">
+            <tr class="hl-row">
               <td><b>= 毛利</b></td><td class="ctr"><b>25%</b></td><td class="num"><b>1,500萬</b></td><td class="num"><b>3,000萬</b></td><td class="num"><b>6,000萬</b></td><td class="num"><b>1.20億</b></td><td class="num"><b>2.25億</b></td>
             </tr>
             <tr>
-              <td>─ 營業費用</td><td class="ctr">10%</td><td class="num">(600萬)</td><td class="num">(1,200萬)</td><td class="num">(2,400萬)</td><td class="num">(4,800萬)</td><td class="num">(9,000萬)</td>
+              <td>─ 營業費用 (事業部)</td><td class="ctr">10%</td><td class="num">(600萬)</td><td class="num">(1,200萬)</td><td class="num">(2,400萬)</td><td class="num">(4,800萬)</td><td class="num">(9,000萬)</td>
+            </tr>
+            <tr class="good-row">
+              <td><b>= 事業部營業利益</b></td><td class="ctr"><b>15%</b></td><td class="num"><b>900萬</b></td><td class="num"><b>1,800萬</b></td><td class="num"><b>3,600萬</b></td><td class="num"><b>7,200萬</b></td><td class="num"><b>1.35億</b></td>
+            </tr>
+            <tr>
+              <td>─ 營業費用 (公司層級)</td><td class="ctr">5%</td><td class="num">(300萬)</td><td class="num">(600萬)</td><td class="num">(1,200萬)</td><td class="num">(2,400萬)</td><td class="num">(4,500萬)</td>
             </tr>
             <tr class="hl-row">
-              <td><b>= 稅前淨利</b></td><td class="ctr"><b>15%</b></td><td class="num"><b>900萬</b></td><td class="num"><b>1,800萬</b></td><td class="num"><b>3,600萬</b></td><td class="num"><b>7,200萬</b></td><td class="num"><b>1.35億</b></td>
+              <td><b>= 稅前淨利</b></td><td class="ctr"><b>10%</b></td><td class="num"><b>600萬</b></td><td class="num"><b>1,200萬</b></td><td class="num"><b>2,400萬</b></td><td class="num"><b>4,800萬</b></td><td class="num"><b>9,000萬</b></td>
             </tr>
           </tbody>
         </table>
       </div>
-      <div class="big-callout">
-        <div class="label">損益平衡點說明 (會議)</div>
-        <div class="answer">營收達 1 億以上，公司才進入損益平衡狀態。</div>
-        <div class="more">
-          這意味著 15% 淨利率是「規模化後的目標結構」。FY2026 尚未達穩定盈利，可能接近損平；FY2027 跨過損平點；FY2028-29 向 15% 收斂。<br>
-          <b>註：若 FY2026 淨利僅 5~8%，四年累計淨利 1.35億為樂觀情境。</b>
-        </div>
+      <div class="card blue">
+        <h3>管理意義與損益平衡</h3>
+        <p>
+          對內考核用 15% (反映本業經營)，對上彙報用 10% (評估事業部存續價值)。<br>
+          FY2026 淨利 600萬雖然帳面為正，但扣除公司攤提後緩衝極薄；需至 FY2027 (營收 1.2 億) 才跨過安全門檻。
+        </p>
       </div>
     </div>
     <div class="slide-foot">
-      <div>來源：OMPLAN R3.0 損益表與營收結構</div>
-      <div class="pageno">1.3</div>
+      <div>來源：OMPLAN R4.0 損益表</div>
+      <div class="pageno">2.3</div>
     </div>
   </section>
 </div>
 
-<!-- ================= PART 2: 服務容量與成本 ================= -->
-<div class="view" id="view-p2">
+<!-- ================= PART 3: 容量、工程與人力 ================= -->
+<div class="view" id="view-p3">
   <section class="slide">
     <div class="slide-header">
       <div>
-        <div class="eyebrow">Part 2 繚 服務容量與成本 2.1</div>
-        <h1>容量與案場 Portfolio Mix</h1>
-        <p class="sub">FY2029 總容量上修至 901 MW (604 案)。OM-1 佔比下降，容量轉入 OM-2 與 AM。</p>
+        <div class="eyebrow">Part 3 繚 容量、工程與人力 3.1</div>
+        <h1>容量案場演進與單案成本</h1>
+        <p class="sub">以 800kW 為案場基準，FY2029 管理案場數高達 1,190 案；單案成本因案量激增而稀釋。</p>
       </div>
     </div>
     <div class="slide-body">
@@ -308,120 +472,60 @@
             <tr>
               <th>年度</th>
               <th class="num">總容量</th>
-              <th class="num">總案場</th>
-              <th class="ctr">M</th>
-              <th class="ctr">OM-1</th>
-              <th class="ctr">OM-2</th>
-              <th class="ctr">AM</th>
+              <th class="num">總案場 (800kW)</th>
               <th class="num">加權均費</th>
+              <th class="num">單案成本法</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><b>FY2026</b></td><td class="num"><b>130 MW</b></td><td class="num"><b>139案</b></td>
-              <td class="ctr">26MW/104案 (20%)</td><td class="ctr">104MW/35案 (80%)</td><td class="ctr">—</td><td class="ctr">—</td>
-              <td class="num">28.60萬/MW</td>
+              <td>FY2026</td><td class="num">130 MW</td><td class="num">140 案</td>
+              <td class="num">28.60萬/MW</td><td class="num">7,500 元/案/月</td>
             </tr>
             <tr>
-              <td><b>FY2027</b></td><td class="num"><b>260 MW</b></td><td class="num"><b>231案</b></td>
-              <td class="ctr">39MW/157案 (15%)</td><td class="ctr">156MW/53案 (60%)</td><td class="ctr">52MW/18案 (20%)</td><td class="ctr">13MW/3案 (5%)</td>
-              <td class="num">32.30萬/MW</td>
+              <td>FY2027</td><td class="num">264 MW</td><td class="num">331 案</td>
+              <td class="num">31.80萬/MW</td><td class="num">2,961 元/案/月</td>
             </tr>
             <tr>
-              <td><b>FY2028</b></td><td class="num"><b>481 MW</b></td><td class="num"><b>364案</b></td>
-              <td class="ctr">58MW/231案 (12%)</td><td class="ctr">216MW/73案 (45%)</td><td class="ctr">144MW/49案 (30%)</td><td class="ctr">62MW/11案 (13%)</td>
-              <td class="num">34.95萬/MW</td>
+              <td>FY2028</td><td class="num">499 MW</td><td class="num">625 案</td>
+              <td class="num">33.65萬/MW</td><td class="num">1,904 元/案/月</td>
             </tr>
             <tr class="hl-row">
-              <td><b>FY2029</b></td><td class="num"><b>901 MW</b></td><td class="num"><b>604案</b></td>
-              <td class="ctr">90MW/361案 (10%)</td><td class="ctr">270MW/91案 (30%)</td><td class="ctr">360MW/121案 (40%)</td><td class="ctr">180MW/31案 (20%)</td>
-              <td class="num"><b>37.30萬/MW</b></td>
+              <td>FY2029</td><td class="num">952 MW</td><td class="num"><b>1,190 案</b></td>
+              <td class="num"><b>35.30萬/MW</b></td><td class="num"><b>1,176 元/案/月</b></td>
             </tr>
           </tbody>
         </table>
       </div>
-      <div class="card amber">
-        <h3>⚠️ M 層級案數膨脹問題 (待決)</h3>
-        <p>
-          FY2029：M 佔容量 10%、佔收入 4%，卻佔案場數 60%（361/604案）。行政與派工負擔高度集中。<br>
-          <b>會議傾向對策：</b><br>
-          巡檢、清洗等低價值重複性工作逐步外包，內部僅保留核心人員負責質量管控。將內部精力集中在挖掘 SD 高價值訂單。
-        </p>
-      </div>
-    </div>
-    <div class="slide-foot">
-      <div>來源：OMPLAN R3.0 容量與案場規劃</div>
-      <div class="pageno">2.1</div>
-    </div>
-  </section>
-
-  <section class="slide">
-    <div class="slide-header">
-      <div>
-        <div class="eyebrow">Part 2 繚 服務容量與成本 2.2</div>
-        <h1>單案成本法 (新增管理工具)</h1>
-        <p class="sub">以單案月度人力分攤成本作為管理基準，現況為 1 萬元/案/月，未來目標為 5,000 元。</p>
-      </div>
-    </div>
-    <div class="slide-body">
-      <div class="split-45">
-        <div class="card primary">
-          <h3>單案成本設定 (每季更新)</h3>
-          <ul>
-            <li><b>單案月度人力分攤：</b> 1 萬元/案/月</li>
-            <li><b>未來目標：</b> 5,000 元/案/月</li>
-            <li><b>剝離原則：</b> 美威亞、AM 等大型特殊案提前剝離，不參與常規平均。專屬人員 (小白等) 成本歸入 AM。</li>
-            <li><b>分區預判：</b> 桃竹苗(最低)、中部(中等)、南部(偏高)。</li>
-          </ul>
-        </div>
+      <div class="split-50">
         <div class="card teal">
-          <h3>東部虛擬成本與策略</h3>
+          <h3>均費上升動能</h3>
           <p>
-            東部若投入 1 名工程師 (月薪5萬×1.4 = 7萬/月)。若承接 1 案，單案成本高達 7萬/月。需至少 7 案才能達標 1萬 基準。<br>
-            <b>策略：</b>東部不主動承接。客戶洽詢零散小案需額外補貼成本，否則全外包。
+            加權均費從 28.6 升至 35.3萬，主要驅動力是 OM-2 (保PR 8%) 佔比從 0% 升至 40%。<br>
+            AM 佔比提升反而會微幅拉低前四年均費。
+          </p>
+        </div>
+        <div class="card primary">
+          <h3>單案成本下降迷思</h3>
+          <p>
+            單案成本從 7,500 元跌至 1,176 元，提早達成 5,000 元目標。<br>
+            但這並非內部效率提升，而是案量成長遠快於人力編制，實質上是「大量依賴外包」的結果。
           </p>
         </div>
       </div>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>年度</th>
-              <th class="num">服務人力</th>
-              <th class="num">服務人力成本 (年)</th>
-              <th class="num">案場數</th>
-              <th class="num">單案成本 (模型推算)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>FY2026</td><td class="num">15人</td><td class="num">1,260萬</td><td class="num">139案</td><td class="num"><b>7,554 元/案/月</b></td>
-            </tr>
-            <tr>
-              <td>FY2027</td><td class="num">14人</td><td class="num">1,176萬</td><td class="num">231案</td><td class="num"><b>4,242 元/案/月</b></td>
-            </tr>
-            <tr>
-              <td>FY2028</td><td class="num">17人</td><td class="num">1,428萬</td><td class="num">364案</td><td class="num"><b>3,269 元/案/月</b></td>
-            </tr>
-            <tr class="hl-row">
-              <td>FY2029</td><td class="num">20人</td><td class="num">1,680萬</td><td class="num">604案</td><td class="num"><b>2,318 元/案/月</b></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
     </div>
     <div class="slide-foot">
-      <div>來源：OMPLAN R3.0 單案成本法</div>
-      <div class="pageno">2.2</div>
+      <div>來源：OMPLAN R4.0 容量與單案成本</div>
+      <div class="pageno">3.1</div>
     </div>
   </section>
 
   <section class="slide">
     <div class="slide-header">
       <div>
-        <div class="eyebrow">Part 2 繚 服務容量與成本 2.3</div>
+        <div class="eyebrow">Part 3 繚 容量、工程與人力 3.2</div>
         <h1>工程業務：分析模組 → SD 訂單</h1>
-        <p class="sub">工程佔比高不是「本業不足」，而是「數據能力變現」的結果。所有分析模組最終落地為 SD 訂單。</p>
+        <p class="sub">因案場基數膨脹，修理工程自然成長提升，SD 訂單的成長壓力相對降低至 6.7 倍。</p>
       </div>
     </div>
     <div class="slide-body">
@@ -431,106 +535,111 @@
             <tr>
               <th>年度</th>
               <th class="num">工程收入 (30%)</th>
-              <th class="num">修理 (案數×4萬)</th>
+              <th class="num">修理工程 (隨案數增長)</th>
               <th class="num">整改／SD 訂單</th>
               <th class="ctr">SD 佔比</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>FY2026</td><td class="num">2,000萬</td><td class="num">556萬 (139案)</td><td class="num">1,442萬</td><td class="ctr">72%</td>
+              <td>FY2026</td><td class="num">2,000萬</td><td class="num">560萬 (140案)</td><td class="num">1,440萬</td><td class="ctr">72%</td>
             </tr>
             <tr>
-              <td>FY2027</td><td class="num">3,600萬</td><td class="num">924萬 (231案)</td><td class="num">2,676萬</td><td class="ctr">74%</td>
+              <td>FY2027</td><td class="num">3,600萬</td><td class="num">1,324萬 (331案)</td><td class="num">2,276萬</td><td class="ctr">63%</td>
             </tr>
             <tr>
-              <td>FY2028</td><td class="num">7,200萬</td><td class="num">1,456萬 (364案)</td><td class="num">5,744萬</td><td class="ctr">80%</td>
+              <td>FY2028</td><td class="num">7,200萬</td><td class="num">2,500萬 (625案)</td><td class="num">4,700萬</td><td class="ctr">65%</td>
             </tr>
             <tr class="hl-row">
-              <td>FY2029</td><td class="num">1.44億</td><td class="num">2,416萬 (604案)</td><td class="num"><b>1.20億</b></td><td class="ctr"><b>83%</b></td>
+              <td>FY2029</td><td class="num">1.44億</td><td class="num"><b>4,760萬</b> (1,190案)</td><td class="num"><b>9,640萬</b></td><td class="ctr">67%</td>
             </tr>
           </tbody>
         </table>
       </div>
-      <div class="big-callout" style="background:linear-gradient(120deg,#063f35,#0a8c66);">
-        <div class="label">業務邏輯說明（對高層彙報重點）</div>
-        <div class="answer">分析模組 → 預判設備故障時間點 → 提前安排更換 → SD 訂單增長</div>
-        <div class="more">
-          分析模組本身不產生新的收入類型。修理工程僅佔 17%，其餘 83% 必須靠主動挖掘的 SD 訂單。<br>
-          <b>待細化：</b>定義觸發條件與 KPI 歸屬（計入 BU 還是維運工程組）。
+      <div class="card amber">
+        <h3>SD 訂單成長與派工負擔</h3>
+        <p>
+          <b>好消息：</b>修理工程隨案場數飆升，自然成長從 4.3 倍提升至 8.5 倍，讓 SD 訂單的成長目標從 8.3 倍降至 6.7 倍。<br>
+          <b>壞消息：</b>4,760 萬的修理工程，意味著 1,190 個案場的異常處理量能，這本身就是極其巨大的派工負擔。
+        </p>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>來源：OMPLAN R4.0 工程業務</div>
+      <div class="pageno">3.2</div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">Part 3 繚 容量、工程與人力 3.3</div>
+        <h1>人力編制與外包缺口</h1>
+        <p class="sub">FY2029 案均負荷達 59.5 案/人，突破上限，必須依靠 47% 的外包量能支撐。</p>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>年度</th>
+              <th class="num">維運服務人力</th>
+              <th class="num">案/人 負荷</th>
+              <th class="num">需求容量</th>
+              <th class="num">自有承載</th>
+              <th class="num">必須外包率</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>FY2026</td><td class="num">15人</td><td class="num">9.3</td><td class="num">130 MW</td><td class="num">375 MW</td><td class="num">0%</td>
+            </tr>
+            <tr>
+              <td>FY2027</td><td class="num">14人</td><td class="num">23.6</td><td class="num">264 MW</td><td class="num">350 MW</td><td class="num">0%</td>
+            </tr>
+            <tr class="bad-row">
+              <td>FY2028</td><td class="num">17人</td><td class="num">36.8</td><td class="num">499 MW</td><td class="num">425 MW</td><td class="num">15%</td>
+            </tr>
+            <tr class="hl-row">
+              <td>FY2029</td><td class="num">20人</td><td class="num"><b>59.5 ⚠️</b></td><td class="num">952 MW</td><td class="num">500 MW</td><td class="num"><b>47% ⚠️</b></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="split-50">
+        <div class="card purple">
+          <h3>雙軌檢核與外包項目</h3>
+          <p>
+            容量缺口 (47%) 高於案場缺口 (33%)，取較大者為約束。<br>
+            <b>可外包：</b>清洗、高壓保養、除草、修繕、土建、M層巡檢。<br>
+            <b>絕不外包：</b>監控判讀、PR分析、SD提案、派工調度。
+          </p>
+        </div>
+        <div class="card blue">
+          <h3>地理配置 (南50/中30/北20)</h3>
+          <p>
+            南部 476MW；中部 286MW；其他 190MW。<br>
+            東部不主動承接。協力商覆蓋在彰化、雲林、屏東仍為零，需於 2027/Q1 補齊。
+          </p>
         </div>
       </div>
     </div>
     <div class="slide-foot">
-      <div>來源：OMPLAN R3.0 工程業務</div>
-      <div class="pageno">2.3</div>
+      <div>來源：OMPLAN R4.0 人力與外包</div>
+      <div class="pageno">3.3</div>
     </div>
   </section>
 </div>
 
-<!-- ================= PART 3: 人力配置與風險 ================= -->
-<div class="view" id="view-p3">
+<!-- ================= PART 4: 里程碑與參數 ================= -->
+<div class="view" id="view-p4">
   <section class="slide">
     <div class="slide-header">
       <div>
-        <div class="eyebrow">Part 3 繚 人力配置與風險 3.1</div>
-        <h1>人力編制、外包策略與地理布局</h1>
-        <p class="sub">雙軌人力模型，外包率預計於 FY2029 達到 45%。地理資源集中於中南部。</p>
-      </div>
-    </div>
-    <div class="slide-body">
-      <div class="split-55">
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>年度</th>
-                <th class="num">總人力</th>
-                <th class="num">維運工程</th>
-                <th class="num">維運服務</th>
-                <th class="num">MW/人</th>
-                <th class="num">外包缺口</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>FY2026</td><td class="num">19人</td><td class="num">1人</td><td class="num">15人</td><td class="num">8.7</td><td class="num">0%</td>
-              </tr>
-              <tr>
-                <td>FY2027</td><td class="num">20人</td><td class="num">2人</td><td class="num">14人</td><td class="num">18.6</td><td class="num">0%</td>
-              </tr>
-              <tr>
-                <td>FY2028</td><td class="num">26人</td><td class="num">4人</td><td class="num">17人</td><td class="num">28.3</td><td class="num">12%</td>
-              </tr>
-              <tr class="hl-row">
-                <td>FY2029</td><td class="num">34人</td><td class="num">8人</td><td class="num">20人</td><td class="num"><b>45.0</b></td><td class="num"><b>45%</b></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="card purple">
-          <h3>地理布局與外包原則</h3>
-          <ul>
-            <li><b>南部 50%：</b> 嘉南高屏（目前屏東無協力商）。</li>
-            <li><b>中部 30%：</b> 彰化、雲林、台中（中彰雲無覆蓋）。</li>
-            <li><b>其他 20%：</b> 桃竹苗。</li>
-            <li><b>外包原則：</b> 巡檢、清洗等低價值工作外包，內部保留質量管控與挖掘 SD 訂單。</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="slide-foot">
-      <div>來源：OMPLAN R3.0 人力架構與地理布局</div>
-      <div class="pageno">3.1</div>
-    </div>
-  </section>
-
-  <section class="slide">
-    <div class="slide-header">
-      <div>
-        <div class="eyebrow">Part 3 繚 人力配置與風險 3.2</div>
+        <div class="eyebrow">Part 4 繚 里程碑與參數 4.1</div>
         <h1>關鍵假設與里程碑 Gate</h1>
-        <p class="sub">列出最高優先驗證假設，未達標則啟動 No-Go 機制以保護公司利潤與現金流。</p>
+        <p class="sub">優先落實 PR 三情境合約範本與 AM 分潤機制，確保收入與風險模型成立。</p>
       </div>
     </div>
     <div class="slide-body">
@@ -549,54 +658,55 @@
               <td>2026/09</td>
               <td>查核既有 OM 合約，確認 6%/8% 浮動定價的基數定義</td>
             </tr>
-            <tr>
-              <td><b>M2 PR 責任書面化</b></td>
+            <tr class="hl-row">
+              <td><b>M2 PR 三情境合約範本</b></td>
               <td>2026/Q4</td>
-              <td>與 EPC 部門完成 PR 扣款移轉的權責劃分書面簽署</td>
+              <td>擬定情境一／二A／二B標準條款；與 EPC 完成書面權責確認</td>
             </tr>
-            <tr>
-              <td><b>M3 AM 分潤機制</b></td>
+            <tr class="hl-row">
+              <td><b>M3 AM 分潤機制設計</b></td>
               <td>2026/Q4</td>
-              <td>參照國泰模式，定義分潤觸發條件與分配規則 (解決無正式AM問題)</td>
+              <td>定義 DY 計算方式、分潤觸發條件、20年費率結構</td>
             </tr>
             <tr>
               <td><b>M4 分析模組→SD</b></td>
               <td>2026/Q4</td>
-              <td>拆解觸發條件、報價流程、KPI 歸屬，產出首批 ≥5 件提案</td>
+              <td>拆解報價流程、KPI 歸屬，產出首批 ≥5 件提案</td>
             </tr>
-            <tr class="hl-row">
+            <tr>
+              <td><b>M6 接單門檻政策</b></td>
+              <td>2026/Q4</td>
+              <td>400kW 以下原則不接；建立區域包裹式承接機制</td>
+            </tr>
+            <tr class="bad-row">
               <td><b>M7 FY2026 損益結算</b></td>
               <td>2026/Q4</td>
-              <td>實際淨利率驗證；<b>若 &lt;10%，四年累計淨利目標需下修</b></td>
+              <td>驗證 10% 淨利率，若 <7%，四年累計需下修</td>
             </tr>
-            <tr class="good-row">
-              <td><b>M8 FY2027 年度驗證</b></td>
+            <tr>
+              <td><b>M9 FY2027 年度驗證</b></td>
               <td>2027/Q4</td>
-              <td>營收 ≥1.1億；容量 ≥230MW (達損益平衡規模)</td>
+              <td>營收 ≥1.1億；容量 ≥240MW；淨利率 ≥8%</td>
             </tr>
           </tbody>
         </table>
       </div>
-      <div class="card coral">
-        <h3>收斂／No-Go 機制 (保護現金流與毛利)</h3>
-        <p>若實際營收不如預期，優先停止尚未驗證的成長 → 凍結高風險產品 → 控制新增交付 → 最後調整 M/OM 核心本業。</p>
-      </div>
     </div>
     <div class="slide-foot">
-      <div>來源：OMPLAN R3.0 關鍵假設清單與里程碑</div>
-      <div class="pageno">3.2</div>
+      <div>來源：OMPLAN R4.0 里程碑</div>
+      <div class="pageno">4.1</div>
     </div>
   </section>
 
   <section class="slide">
     <div class="slide-header">
       <div>
-        <div class="eyebrow">Part 3 繚 人力配置與風險 3.3</div>
-        <h1>✅ 已確認參數表</h1>
-        <p class="sub">已於 2026-08-31 與 BP 確認完畢。</p>
+        <div class="eyebrow">Part 4 繚 里程碑與參數 4.2</div>
+        <h1>⚠️ 未確認參數表</h1>
+        <p class="sub">本版建模時包含 5 項推定值尚未確認，為彙報前必須優先釐清的風險項目。</p>
       </div>
       <div class="flags">
-        <span class="flag good">完成驗證</span>
+        <span class="flag coral">優先確認</span>
       </div>
     </div>
     <div class="slide-body">
@@ -606,32 +716,40 @@
             <tr>
               <th class="ctr">#</th>
               <th>參數</th>
-              <th>確認結果</th>
-              <th>確認狀態</th>
-              <th>更新備註</th>
+              <th>本版推定</th>
+              <th>錯誤影響與確認方式</th>
             </tr>
           </thead>
           <tbody>
-            <tr class="good-row">
+            <tr class="bad-row">
               <td class="ctr"><b>1</b></td>
               <td><b>6% / 8% 的計費基數</b></td>
               <td>售電收入</td>
-              <td>已確認為售電收入，維持原模型設定。</td>
-              <td>✅ 2026-08-31 確認</td>
+              <td>若為建置成本，模型錯近 8 倍。<b>需調閱合約</b>。</td>
             </tr>
-            <tr class="good-row">
+            <tr class="hl-row">
               <td class="ctr"><b>2</b></td>
               <td><b>FY2027 營收目標</b></td>
               <td>1.2億</td>
-              <td>已確認為 1.2 億，維持原模型設定。</td>
-              <td>✅ 2026-08-31 確認</td>
+              <td>紀錄曾出現 6,000萬。<b>向會議參與者確認</b>。</td>
             </tr>
-            <tr class="good-row">
+            <tr class="hl-row">
               <td class="ctr"><b>3</b></td>
               <td><b>地理配比的單位</b></td>
               <td>百分比 (%)</td>
-              <td>已確認為百分比 (%) 筆誤，符合 100% 邏輯。</td>
-              <td>✅ 2026-08-31 確認</td>
+              <td>逐字稿記為「人」。<b>向會議參與者確認</b>。</td>
+            </tr>
+            <tr>
+              <td class="ctr"><b>4</b></td>
+              <td><b>DY 值的計算基準</b></td>
+              <td>發電達成率</td>
+              <td>影響 AM 分潤觸發判定。<b>需調閱國泰合約</b>。</td>
+            </tr>
+            <tr>
+              <td class="ctr"><b>5</b></td>
+              <td><b>單案成本門檻 12萬</b></td>
+              <td>1萬/月</td>
+              <td>影響接單門檻 (400kW vs 620kW)。<b>待成本核算校正</b>。</td>
             </tr>
           </tbody>
         </table>
@@ -640,14 +758,14 @@
         <h3>其他待補資料</h3>
         <ul>
           <li>FY2026 收入對帳差異 284 萬 (+7.6%) 的實際來源。</li>
-          <li>AM 分潤制的具體費率結構（目前模型僅以 45萬/MW 等值推算）。</li>
-          <li>小白等專屬人力歸入 AM 業務線後，對通用區域單案成本基準的影響。</li>
+          <li>情境一「EPC 賠償維運單位」的賠償計算方式與上限。</li>
+          <li>公司層級費用 5% 的分攤基礎（按營收分攤或按人數分攤？）。</li>
         </ul>
       </div>
     </div>
     <div class="slide-foot">
-      <div>來源：OMPLAN R3.0 已確認參數表</div>
-      <div class="pageno">3.3</div>
+      <div>來源：OMPLAN R4.0 未確認參數表</div>
+      <div class="pageno">4.2</div>
     </div>
   </section>
 </div>
