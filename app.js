@@ -1,4 +1,3 @@
-
 (function(){
   var parts = {
     p1: [].slice.call(document.querySelectorAll('#view-p1 .slide')),
@@ -53,40 +52,43 @@
       var v=m[1], i=parseInt(m[2],10)-1;
       if(parts[v] && parts[v][i]){ state.view=v; state.idx=i; render(); return; }
     }
-    if(parts[hash]){ state.view=hash; state.idx=last[hash]||0; render(); return; }
+    if(parts[hash]){
+      state.view=hash;
+      state.idx = last[hash] || 0;
+      render(); return;
+    }
     state.view='home'; render();
   }
 
   function setHash(){
-    var h = state.view==='home' ? '#home' : '#'+state.view+'-'+(state.idx+1);
-    if(location.hash!==h) history.replaceState(null,'',h);
+    if(state.view==='home') history.replaceState(null,'','#home');
+    else history.replaceState(null,'','#'+state.view+'-'+(state.idx+1));
   }
 
-  function move(d){
+  function move(step){
     if(state.view==='home'){
-      if(d>0){ state.view='p1'; state.idx=0; render(); setHash(); }
+      if(step>0){ state.view='p1'; state.idx=0; render(); setHash(); }
       return;
     }
     var slides = parts[state.view];
-    var n = state.idx + d, pos = order.indexOf(state.view);
-    if(n < 0){
-      if(pos > 0){ state.view=order[pos-1]; state.idx=parts[state.view].length-1; }
-      else { state.view='home'; }
-    } else if(n >= slides.length){
-      if(pos < order.length-1){ state.view=order[pos+1]; state.idx=0; }
-      else { state.view='home'; }
-    } else {
-      state.idx=n;
+    var ni = state.idx + step;
+    if(ni>=0 && ni<slides.length){
+      state.idx = ni; render(); setHash();
+    } else if(ni>=slides.length){
+      var pi = order.indexOf(state.view);
+      if(pi<order.length-1){ state.view=order[pi+1]; state.idx=0; render(); setHash(); }
+    } else if(ni<0){
+      var pi2 = order.indexOf(state.view);
+      if(pi2>0){ state.view=order[pi2-1]; state.idx=parts[state.view].length-1; render(); setHash(); }
+      else { state.view='home'; render(); setHash(); }
     }
-    render(); setHash();
   }
 
-  document.getElementById('btnPrev').addEventListener('click',function(){move(-1)});
-  document.getElementById('btnNext').addEventListener('click',function(){move(1)});
+  document.getElementById('btnPrev').addEventListener('click',function(){ move(-1); });
+  document.getElementById('btnNext').addEventListener('click',function(){ move(1); });
 
   document.addEventListener('keydown',function(e){
-    var t=e.target;
-    if(t&&(t.tagName==='INPUT'||t.tagName==='TEXTAREA'||t.tagName==='SELECT')) return;
+    if(e.target.tagName==='INPUT'||e.target.tagName==='TEXTAREA'||e.target.tagName==='SELECT') return;
     if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown'){ e.preventDefault(); move(1); }
     else if(e.key==='ArrowLeft'||e.key==='PageUp'){ e.preventDefault(); move(-1); }
     else if(e.key==='Home'){ e.preventDefault(); state.view='home'; render(); setHash(); }
@@ -111,7 +113,7 @@
 })();
 
 
-// ================= SIMULATOR LOGIC =================
+// ================= R5.0 SIMULATOR LOGIC =================
 (function(){
   var inMw = document.getElementById('input-mw');
   var inKw = document.getElementById('input-kw');
@@ -134,11 +136,16 @@
     outNp: document.getElementById('out-np'),
     outNpPct: document.getElementById('out-np-pct'),
     outSites: document.getElementById('out-sites'),
-    outAvgPrice: document.getElementById('out-avg-price'),
-    outHc: document.getElementById('out-hc'),
+    outTeams: document.getElementById('out-teams'),
+    outServiceHc: document.getElementById('out-service-hc'),
+    outTotalHc: document.getElementById('out-total-hc'),
     outLabor: document.getElementById('out-labor'),
     outLaborPct: document.getElementById('out-labor-pct'),
-    outOutsource: document.getElementById('out-outsource')
+    outReserve: document.getElementById('out-reserve'),
+    outAvgPrice: document.getElementById('out-avg-price'),
+    outDyStatus: document.getElementById('out-dy-status'),
+    siteStatus: document.getElementById('site-status'),
+    simWarning: document.getElementById('sim-warning')
   };
 
   function update(){
@@ -148,7 +155,7 @@
     var om2 = parseFloat(inOm2.value);
     var am = parseFloat(inAm.value);
     
-    // Constraints
+    // Constraints: M is fixed at 15%
     if(om2 + am > 85) {
       om2 = 85 - am;
       inOm2.value = om2;
@@ -165,34 +172,41 @@
     var mPct = 15;
     var om1Pct = 100 - mPct - om2 - am;
 
-    // Revenue
-    var avgPrice = (mPct*15 + om1Pct*32 + om2*43 + am*35) / 100;
+    // Pricing & Revenue
+    var avgPrice = (mPct * 15 + om1Pct * 32 + om2 * 43 + am * 35) / 100;
     var serviceRev = mw * avgPrice;
-    var repairRev = sites * 4;
+    var repairRev = sites * 4; // 4萬 / 案
     var engRev = repairRev + sd;
     var totalRev = serviceRev + engRev;
 
-    // Headcount & Labor Cost
-    var serviceHc = Math.max(mw / 25, sites / 40);
-    var engHc = engRev / 2000;
-    var buHc = 4;
-    var totalHc = Math.ceil(serviceHc + engHc + buHc);
-    var laborCost = totalHc * 84; // 84萬 per person per year
+    // Master + Slave Mode: 50 sites per team (2 persons per team)
+    var teams = Math.ceil(sites / 50);
+    var serviceHc = teams * 2;
+    var engHc = Math.max(1, Math.ceil(engRev / 2000));
+    var buHc = 4; // Fixed BU management
+    var totalHc = serviceHc + engHc + buHc;
 
-    // Other Costs (System Dynamics Simulation)
-    // Assume other costs scale with revenue + fixed outsourcing baseline
-    var otherCost = (totalRev * 0.22) + repairRev; 
-    var totalCost = laborCost + otherCost;
+    // Labor Cost: 90 萬 / 人年 (R5.0 per-person complete cost)
+    var laborCost = totalHc * 90;
 
-    var grossProfit = totalRev - totalCost;
+    // 2% Special Repair Reserve Fund (提列自維運服務營收)
+    var reserveCost = serviceRev * 0.02;
+
+    // Other COGS (Field delivery: 12萬/MW + Subcontracted repair baseline)
+    var fieldDelivery = mw * 12;
+    var repairSubcontract = repairRev * 0.6; // 60% sub-contracted
+    var totalCogs = laborCost + reserveCost + fieldDelivery + repairSubcontract;
+
+    var grossProfit = totalRev - totalCogs;
     var gpPct = (grossProfit / totalRev) * 100;
 
-    var buExp = totalRev * 0.10;
+    // Expenses: BU Fixed (1,200萬 or 10%) + Corporate 5%
+    var buExp = Math.max(totalRev * 0.10, 1200);
     var corpExp = totalRev * 0.05;
     var netProfit = grossProfit - buExp - corpExp;
     var npPct = (netProfit / totalRev) * 100;
 
-    // Update UI
+    // Update UI elements
     els.outRev.textContent = Math.round(totalRev).toLocaleString();
     els.outGp.textContent = Math.round(grossProfit).toLocaleString();
     els.outGpPct.textContent = '毛利 (' + gpPct.toFixed(1) + '%)';
@@ -200,15 +214,40 @@
     els.outNpPct.textContent = '稅前淨利 (' + npPct.toFixed(1) + '%)';
     
     els.outSites.textContent = sites.toLocaleString();
-    els.outAvgPrice.textContent = avgPrice.toFixed(2);
-    els.outHc.textContent = totalHc;
+    els.outTeams.textContent = teams;
+    els.outServiceHc.textContent = serviceHc;
+    els.outTotalHc.textContent = totalHc;
     els.outLabor.textContent = Math.round(laborCost).toLocaleString();
     els.outLaborPct.textContent = ((laborCost / totalRev) * 100).toFixed(1) + '%';
-    els.outOutsource.textContent = Math.round(otherCost).toLocaleString();
-    
-    // Color coding
-    els.outGp.style.color = gpPct < 20 ? 'var(--coral)' : 'var(--teal)';
-    els.outNp.style.color = npPct < 5 ? 'var(--coral)' : 'var(--teal)';
+    els.outReserve.textContent = Math.round(reserveCost).toLocaleString();
+    els.outAvgPrice.textContent = avgPrice.toFixed(2);
+
+    // Dynamic Tags and Warnings
+    if(kw < 600) {
+      els.siteStatus.textContent = '⚠️ 案均過小 (' + kw + 'kW)';
+      els.siteStatus.className = 'chip coral';
+      els.simWarning.style.display = 'block';
+    } else if(kw > 1000) {
+      els.siteStatus.textContent = '✅ 大案場優勢 (' + kw + 'kW)';
+      els.siteStatus.className = 'chip green';
+      els.simWarning.style.display = 'none';
+    } else {
+      els.siteStatus.textContent = '符合 800kW 基準';
+      els.siteStatus.className = 'chip blue';
+      els.simWarning.style.display = 'none';
+    }
+
+    if(kw < 400 || (totalRev / sites) < 12) {
+      els.outDyStatus.textContent = '❌ 低於12萬成本淘汰線';
+      els.outDyStatus.style.color = 'var(--coral)';
+    } else {
+      els.outDyStatus.textContent = '符合 ≥ 3.5 門檻';
+      els.outDyStatus.style.color = 'var(--green)';
+    }
+
+    // Color coding for metrics
+    els.outGp.style.color = gpPct < 25 ? 'var(--coral)' : (gpPct >= 35 ? 'var(--green)' : 'var(--teal)');
+    els.outNp.style.color = npPct < 10 ? 'var(--coral)' : (npPct >= 15 ? 'var(--green)' : 'var(--blue)');
   }
 
   [inMw, inKw, inSd, inOm2, inAm].forEach(function(el){

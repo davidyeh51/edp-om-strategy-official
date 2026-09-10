@@ -182,9 +182,9 @@ svg text{font-family:inherit}
   transition:transform .15s ease, box-shadow .15s ease; position:relative; overflow:hidden;
 }
 .part-card:hover{transform:translateY(-4px); box-shadow:0 12px 28px rgba(18,41,61,.12)}
-.part-card.c2{border-top-color:var(--teal)} .part-card.c3{border-top-color:var(--amber)} .part-card.c4{border-top-color:var(--coral)}
+.part-card.c2{border-top-color:var(--teal)} .part-card.c3{border-top-color:var(--amber)} .part-card.c4{border-top-color:var(--coral)} .part-card.c5{border-top-color:var(--green)}
 .part-card .pc-eyebrow{font-size:.72rem; font-weight:800; letter-spacing:.14em; color:var(--blue)}
-.part-card.c2 .pc-eyebrow{color:var(--teal-d)} .part-card.c3 .pc-eyebrow{color:#9a6a10} .part-card.c4 .pc-eyebrow{color:#b4432c}
+.part-card.c2 .pc-eyebrow{color:var(--teal-d)} .part-card.c3 .pc-eyebrow{color:#9a6a10} .part-card.c4 .pc-eyebrow{color:#b4432c} .part-card.c5 .pc-eyebrow{color:var(--green)}
 .part-card h2{font-size:1.22rem; font-weight:800; margin:8px 0 6px; line-height:1.35}
 .part-card p{color:var(--muted); font-size:.87rem; line-height:1.58}
 .part-card .pc-flags{margin-top:12px; display:flex; gap:6px; flex-wrap:wrap}
