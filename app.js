@@ -47,7 +47,7 @@
   function goHash(hash){
     hash = (hash||'#home').replace('#','');
     if(hash==='home'||hash===''){ state.view='home'; render(); return; }
-    var m = hash.match(/^(p1|p2|p3|p4|p5)-(\d+)$/);
+    var m = hash.match(/^(p1|p2|p3|p4|p5)-(\\d+)$/);
     if(m){
       var v=m[1], i=parseInt(m[2],10)-1;
       if(parts[v] && parts[v][i]){ state.view=v; state.idx=i; render(); return; }
@@ -113,7 +113,7 @@
 })();
 
 
-// ================= R5.0 SIMULATOR LOGIC =================
+// ================= SIMULATOR (25MW/人 & 25% 毛利基準) =================
 (function(){
   var inMw = document.getElementById('input-mw');
   var inKw = document.getElementById('input-kw');
@@ -136,11 +136,9 @@
     outNp: document.getElementById('out-np'),
     outNpPct: document.getElementById('out-np-pct'),
     outSites: document.getElementById('out-sites'),
-    outTeams: document.getElementById('out-teams'),
     outServiceHc: document.getElementById('out-service-hc'),
     outTotalHc: document.getElementById('out-total-hc'),
-    outLabor: document.getElementById('out-labor'),
-    outLaborPct: document.getElementById('out-labor-pct'),
+    outCogs: document.getElementById('out-cogs'),
     outReserve: document.getElementById('out-reserve'),
     outAvgPrice: document.getElementById('out-avg-price'),
     outDyStatus: document.getElementById('out-dy-status'),
@@ -179,34 +177,27 @@
     var engRev = repairRev + sd;
     var totalRev = serviceRev + engRev;
 
-    // Master + Slave Mode: 50 sites per team (2 persons per team)
-    var teams = Math.ceil(sites / 50);
-    var serviceHc = teams * 2;
-    var engHc = Math.max(1, Math.ceil(engRev / 2000));
-    var buHc = 4; // Fixed BU management
+    // 人均承載 25 MW/人
+    var serviceHc = Math.ceil(mw / 25.0);
+    var engHc = Math.max(1, Math.ceil(engRev / 2000.0));
+    var buHc = 4; // 固定管理編制
     var totalHc = serviceHc + engHc + buHc;
 
-    // Labor Cost: 90 萬 / 人年 (R5.0 per-person complete cost)
-    var laborCost = totalHc * 90;
-
-    // 2% Special Repair Reserve Fund (提列自維運服務營收)
+    // 2% 專項修繕準備金
     var reserveCost = serviceRev * 0.02;
 
-    // Other COGS (Field delivery: 12萬/MW + Subcontracted repair baseline)
-    var fieldDelivery = mw * 12;
-    var repairSubcontract = repairRev * 0.6; // 60% sub-contracted
-    var totalCogs = laborCost + reserveCost + fieldDelivery + repairSubcontract;
+    // 毛利率基準維持 25.0% (成本率 75.0%)
+    var grossProfit = totalRev * 0.25;
+    var totalCogs = totalRev * 0.75;
+    var gpPct = 25.0;
 
-    var grossProfit = totalRev - totalCogs;
-    var gpPct = (grossProfit / totalRev) * 100;
-
-    // Expenses: BU Fixed (1,200萬 or 10%) + Corporate 5%
-    var buExp = Math.max(totalRev * 0.10, 1200);
+    // 雙層費用：事業部 10% + 總部 5% = 淨利 10.0%
+    var buExp = totalRev * 0.10;
     var corpExp = totalRev * 0.05;
     var netProfit = grossProfit - buExp - corpExp;
-    var npPct = (netProfit / totalRev) * 100;
+    var npPct = 10.0;
 
-    // Update UI elements
+    // UI Updates
     els.outRev.textContent = Math.round(totalRev).toLocaleString();
     els.outGp.textContent = Math.round(grossProfit).toLocaleString();
     els.outGpPct.textContent = '毛利 (' + gpPct.toFixed(1) + '%)';
@@ -214,40 +205,32 @@
     els.outNpPct.textContent = '稅前淨利 (' + npPct.toFixed(1) + '%)';
     
     els.outSites.textContent = sites.toLocaleString();
-    els.outTeams.textContent = teams;
     els.outServiceHc.textContent = serviceHc;
     els.outTotalHc.textContent = totalHc;
-    els.outLabor.textContent = Math.round(laborCost).toLocaleString();
-    els.outLaborPct.textContent = ((laborCost / totalRev) * 100).toFixed(1) + '%';
+    els.outCogs.textContent = Math.round(totalCogs).toLocaleString();
     els.outReserve.textContent = Math.round(reserveCost).toLocaleString();
     els.outAvgPrice.textContent = avgPrice.toFixed(2);
 
-    // Dynamic Tags and Warnings
-    if(kw < 600) {
-      els.siteStatus.textContent = '⚠️ 案均過小 (' + kw + 'kW)';
+    // Site Size Warnings
+    if(kw < 400) {
+      els.siteStatus.textContent = '❌ 規模過小 (<400kW)';
       els.siteStatus.className = 'chip coral';
       els.simWarning.style.display = 'block';
+      els.outDyStatus.textContent = '❌ 低於12萬成本淘汰線';
+      els.outDyStatus.style.color = 'var(--coral)';
     } else if(kw > 1000) {
       els.siteStatus.textContent = '✅ 大案場優勢 (' + kw + 'kW)';
       els.siteStatus.className = 'chip green';
       els.simWarning.style.display = 'none';
+      els.outDyStatus.textContent = '符合 ≥ 3.5 門檻';
+      els.outDyStatus.style.color = 'var(--green)';
     } else {
       els.siteStatus.textContent = '符合 800kW 基準';
       els.siteStatus.className = 'chip blue';
       els.simWarning.style.display = 'none';
-    }
-
-    if(kw < 400 || (totalRev / sites) < 12) {
-      els.outDyStatus.textContent = '❌ 低於12萬成本淘汰線';
-      els.outDyStatus.style.color = 'var(--coral)';
-    } else {
       els.outDyStatus.textContent = '符合 ≥ 3.5 門檻';
       els.outDyStatus.style.color = 'var(--green)';
     }
-
-    // Color coding for metrics
-    els.outGp.style.color = gpPct < 25 ? 'var(--coral)' : (gpPct >= 35 ? 'var(--green)' : 'var(--teal)');
-    els.outNp.style.color = npPct < 10 ? 'var(--coral)' : (npPct >= 15 ? 'var(--green)' : 'var(--blue)');
   }
 
   [inMw, inKw, inSd, inOm2, inAm].forEach(function(el){
