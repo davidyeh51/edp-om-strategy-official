@@ -27,6 +27,7 @@
     <a href="#p2" data-nav="p2">Part 2 財務損益與接單門檻 (3 頁)</a>
     <a href="#p3" data-nav="p3">Part 3 容量、工程與人力 (3 頁)</a>
     <a href="#p4" data-nav="p4">Part 4 里程碑與參數 (2 頁)</a>
+    <a href="#p5" data-nav="p5">Part 5 敏感性分析 (1 頁)</a>
   </nav>
   <div class="meta">更新日：2026-08-31 ｜ 版本：R4.0 現行版本</div>
 </div>
@@ -83,6 +84,15 @@
         <div class="pc-flags"><span class="chip coral">2 頁</span><span class="chip blue">Gate 機制</span></div>
         <div class="pc-go">進入里程碑 &rarr;</div>
       </a>
+    
+      <a class="part-card c5" href="#p5-1" style="border-top-color:var(--green)">
+        <div class="pc-eyebrow" style="color:var(--green)">PART 5</div>
+        <h2>系統動力學敏感性分析</h2>
+        <p>互動式損益模擬器：調控容量、規模與服務佔比參數，即時驗證商業模式的獲利邊界與人力負荷。</p>
+        <div class="pc-flags"><span class="chip green">1 頁</span><span class="chip amber">互動模擬</span></div>
+        <div class="pc-go">進入模擬器 &rarr;</div>
+      </a>
+
     </div>
 
     <!-- Quick Spec Grid -->
@@ -766,6 +776,121 @@
     <div class="slide-foot">
       <div>來源：OMPLAN R4.0 未確認參數表</div>
       <div class="pageno">4.2</div>
+    </div>
+  </section>
+</div>
+
+
+<!-- ================= PART 5: 敏感性分析 ================= -->
+<div class="view" id="view-p5">
+  <section class="slide">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">Part 5 繚 系統動力學敏感性分析 5.1</div>
+        <h1>損益參數互動模擬器</h1>
+        <p class="sub">透過調整關鍵參數，即時觀察對毛利、淨利與人力負荷的影響，找出商業模式的邊界條件。</p>
+      </div>
+    </div>
+    <div class="slide-body" style="display:flex; gap:20px; height: 100%;">
+      <!-- Controls -->
+      <div class="card blue" style="flex:1; overflow-y:auto; padding:20px; display:flex; flex-direction:column; gap:12px;">
+        <h3>參數調控區</h3>
+        
+        <div>
+          <label style="display:flex; justify-content:space-between;"><b>總管理容量 (MW)</b> <span id="val-mw" style="color:var(--teal); font-weight:bold;">264</span></label>
+          <input type="range" id="input-mw" min="50" max="1500" step="10" value="264" style="width:100%">
+        </div>
+
+        <div>
+          <label style="display:flex; justify-content:space-between;"><b>平均單案規模 (kW)</b> <span id="val-kw" style="color:var(--teal); font-weight:bold;">800</span></label>
+          <input type="range" id="input-kw" min="200" max="2000" step="50" value="800" style="width:100%">
+        </div>
+
+        <div>
+          <label style="display:flex; justify-content:space-between;"><b>SD 訂單目標 (萬元)</b> <span id="val-sd" style="color:var(--teal); font-weight:bold;">2276</span></label>
+          <input type="range" id="input-sd" min="0" max="15000" step="100" value="2276" style="width:100%">
+        </div>
+
+        <hr style="border:0; border-top:1px solid var(--line); margin:5px 0;">
+
+        <div>
+          <label style="display:flex; justify-content:space-between;"><b>保PR (OM-2) 佔比 %</b> <span id="val-om2" style="color:var(--amber); font-weight:bold;">20</span></label>
+          <input type="range" id="input-om2" min="0" max="100" step="5" value="20" style="width:100%">
+        </div>
+
+        <div>
+          <label style="display:flex; justify-content:space-between;"><b>AM 佔比 %</b> <span id="val-am" style="color:var(--amber); font-weight:bold;">5</span></label>
+          <input type="range" id="input-am" min="0" max="100" step="5" value="5" style="width:100%">
+        </div>
+        
+        <div style="font-size:13px; color:var(--muted); line-height:1.6; margin-top:10px; background:var(--paper); padding:10px; border-radius:8px;">
+          <b>模型假設：</b><br>
+          • M 佔比固定 15%，剩餘為 OM-1。<br>
+          • 費率(萬/MW)：M=15, OM1=32, OM2=43, AM=35<br>
+          • 內部人事：84萬/人/年<br>
+          • 維運人力：Max(MW/25, 案數/40)<br>
+          • 修繕工程：案數 × 4萬元<br>
+          • 其他成本：(營收 × 22%) 涵蓋雜項
+        </div>
+      </div>
+
+      <!-- Outputs -->
+      <div class="card" style="flex:2; padding:20px; display:flex; flex-direction:column; gap:15px;">
+        <h3>即時損益表估算 (萬元)</h3>
+        <div class="quick-spec-grid" style="grid-template-columns: 1fr 1fr 1fr; margin-bottom:10px;">
+          <div class="metric blue">
+            <div class="k" id="out-rev">12,000</div>
+            <div class="t">總營業收入</div>
+          </div>
+          <div class="metric teal">
+            <div class="k" id="out-gp" style="color:var(--teal)">3,000</div>
+            <div class="t" id="out-gp-pct">毛利 (25.0%)</div>
+          </div>
+          <div class="metric coral">
+            <div class="k" id="out-np" style="color:var(--coral)">1,200</div>
+            <div class="t" id="out-np-pct">稅前淨利 (10.0%)</div>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>營運指標</th><th>數值</th><th>影響說明</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><b>總案場數</b></td>
+                <td><b id="out-sites" style="color:var(--blue)">330</b> 案</td>
+                <td>決定修繕營收基準與行政派工負擔</td>
+              </tr>
+              <tr>
+                <td><b>維運加權均費</b></td>
+                <td><b id="out-avg-price">31.8</b> 萬/MW</td>
+                <td>隨高價值服務 (OM-2) 佔比浮動</td>
+              </tr>
+              <tr>
+                <td><b>必需總人力</b></td>
+                <td><b id="out-hc">20</b> 人</td>
+                <td>維運服務 + 工程 + BU管理 (固定4人)</td>
+              </tr>
+              <tr>
+                <td><b>內部人事成本</b></td>
+                <td><b id="out-labor">1,680</b> 萬</td>
+                <td>人事佔營收比 <b id="out-labor-pct" style="color:var(--coral)">14.0%</b></td>
+              </tr>
+              <tr>
+                <td><b>工程與其他成本</b></td>
+                <td><b id="out-outsource">7,320</b> 萬</td>
+                <td>含修繕發包、模組清洗、設備攤提等</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>來源：系統動力學敏感性分析</div>
+      <div class="pageno">5.1</div>
     </div>
   </section>
 </div>
