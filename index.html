@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231968AD'/%3E%3Cpath d='M10 50h12V32H10zm16 0h12V20H26zm16 0h12V8H42z' fill='%231bb1bf'/%3E%3C/svg%3E">
-<title>O&M 維運策略計畫 R5.0 | 營運損益與三大決策定案版</title>
-<meta name="description" content="2026-2029 太陽能光伏 O&M 維運策略計畫 R5.0：1.2億營收確認、人均承載25MW、25%毛利率、2027-2029三年營業計算損益表。">
+<title>O&M 維運策略計畫 R6.0 | FY2027 目標定案版</title>
+<meta name="description" content="2026-2029 太陽能光伏 O&M 維運策略計畫 R6.0：簽約1.5億、營收1億、AI Agent建置。">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,35 +19,35 @@
       <rect x="0" y="14" width="12" height="12" rx="2" fill="#1BB1BF" opacity=".6"/>
       <rect x="14" y="14" width="12" height="12" rx="2" fill="#1968AD"/>
     </svg>
-    <div class="tx">OM Strategy<small>Solar Asset Operations R5.0</small></div>
+    <div class="tx">OM Strategy<small>Solar Asset Operations R6.0</small></div>
   </a>
   <nav class="topnav">
     <a href="#home" data-nav="home">首頁</a>
-    <a href="#p1" data-nav="p1">Part 1 R5.0 變更與三大定案 (3 頁)</a>
-    <a href="#p2" data-nav="p2">Part 2 商業規則與接單門檻 (3 頁)</a>
-    <a href="#p3" data-nav="p3">Part 3 人力組織與合約管控 (3 頁)</a>
-    <a href="#p4" data-nav="p4">Part 4 2027~2029損益與治理 (3 頁)</a>
-    <a href="#p5" data-nav="p5">Part 5 敏感性分析模擬器 (1 頁)</a>
+    <a href="#p1" data-nav="p1">Part 1 目標定案與爭議化解</a>
+    <a href="#p2" data-nav="p2">Part 2 營收缺口與容量需求</a>
+    <a href="#p3" data-nav="p3">Part 3 損益推算與 AI Agent</a>
+    <a href="#p4" data-nav="p4">Part 4 參數校正與業務規則</a>
+    <a href="#p5" data-nav="p5">Part 5 假設、里程碑與模擬器</a>
   </nav>
-  <div class="meta">更新日：2026-09-10 ｜ 版本：R5.0 營運損益定案版</div>
+  <div class="meta">更新日：2026-09-10 ｜ 版本：R6.0 FY2027目標定案版</div>
 </div>
 
 <!-- ================= HOME VIEW ================= -->
 <div class="view active home" id="view-home">
   <div class="hero" style="background: linear-gradient(135deg, var(--blue-dd), var(--blue)), url('assets/solar-om-hero.jpg') center/cover; background-blend-mode: overlay;">
     <div class="inner">
-      <div class="kicker">OMPLAN R5.0 ‧ 2026-09-10 營運損益定案版</div>
+      <div class="kicker">OMPLAN R6.0 ‧ 2026-09-10 FY2027 目標定案版</div>
       <h1>太陽能光伏 O&M 維運策略計畫</h1>
       <p class="lede">
-        下週二李總會議三大核心決策正式定案：<b>確認 FY2027 營收 1.20 億元</b>（服務70% / 工程30%）、<b>人均有效承載 25 MW/人</b>、<b>毛利率穩健維持 25%</b>（稅前淨利率 10%）。全面建立 <b>2027~2029 三年期營業計算損益表</b>。
+        本版為董事長與總經理呈報之營運戰略定案版。全面確立：<b>簽約 1.5 億／營收 1.0 億</b>（服務 70% / 工程 30%）、<b>光伏維運營收占比 ≥ 95%</b>、並確立<b>AI Agent 建置</b>為年度必達目標。透過模型敏感性參數校正，補齊營收缺口，並確保充足的技術投資預算。
       </p>
       <div class="herometa">
-        <span>FY2027 營收 1.20億 (確認)</span>
-        <span>毛利率 25% (淨利 10%)</span>
-        <span>人均承載 25 MW/人</span>
-        <span>2027~2029 營收 8.4億</span>
-        <span>DY ≥ 3.5 接單門檻</span>
-        <span>合約強制拆分</span>
+        <span>FY2027 簽約 1.5億</span>
+        <span>營收目標 1.0億</span>
+        <span>服務:工程 7:3</span>
+        <span>光伏維運 ≥ 95%</span>
+        <span>AI Agent 建置</span>
+        <span>12% 淨利(建議)</span>
       </div>
     </div>
   </div>
@@ -56,126 +56,122 @@
     <div class="part-cards">
       <a class="part-card" href="#p1-1">
         <div class="pc-eyebrow">PART 1</div>
-        <h2>R5.0 變更與三大決策定案</h2>
-        <p>13項重大變更對比，正式定調三大核心決策（1.2億為營收、人均承載25MW、毛利維持25%），與系統動力學12項敏感性參數。</p>
-        <div class="pc-flags"><span class="chip blue">3 頁</span><span class="chip green">三大定案</span><span class="chip teal">動態模型</span></div>
-        <div class="pc-go">進入 R5.0 變更與定案 &rarr;</div>
+        <h2>FY2027 目標定案與爭議化解</h2>
+        <p>確認年度簽約1.5億、營收1.0億、服務7成/工程3成，並化解前版R5.0遺留之核心衝突。</p>
+        <div class="pc-flags"><span class="chip blue">2 頁</span><span class="chip green">目標確立</span></div>
+        <div class="pc-go">進入 目標定案 &rarr;</div>
       </a>
 
       <a class="part-card c2" href="#p2-1">
         <div class="pc-eyebrow">PART 2</div>
-        <h2>商業規則與接單門檻</h2>
-        <p>PR 賠付依 EPC 歸屬定案、2% 專項修繕準備金、DY 3.5 接單門檻經濟性驗算，與區域成本向南拓展論述。</p>
-        <div class="pc-flags"><span class="chip teal">3 頁</span><span class="chip amber">DY 3.5門檻</span><span class="chip blue">2%準備金</span></div>
-        <div class="pc-go">進入商業規則 &rarr;</div>
+        <h2>營收缺口處置與容量需求</h2>
+        <p>盤點服務與工程短少，透過參數優化(接管處理期與機會密度)補齊缺口，並釐清 1.5 億簽約容量。</p>
+        <div class="pc-flags"><span class="chip teal">2 頁</span><span class="chip amber">缺口補齊</span></div>
+        <div class="pc-go">進入 缺口與容量 &rarr;</div>
       </a>
 
       <a class="part-card c3" href="#p3-1">
         <div class="pc-eyebrow">PART 3</div>
-        <h2>人力組織與合約管控</h2>
-        <p>Master+Slave 作業模式與產能工時驗算、雙通道晉升與全員加薪留才，以及工程與維運合約強制拆分。</p>
-        <div class="pc-flags"><span class="chip amber">3 頁</span><span class="chip purple">Master+Slave</span><span class="chip coral">合約拆分</span></div>
-        <div class="pc-go">進入人力與合約 &rarr;</div>
+        <h2>損益推算與 AI Agent 建置</h2>
+        <p>建議 12% 淨利率目標以釋出 430 萬預算，全面啟動 AI Agent 戰略（流程自動化與工程機會辨識）。</p>
+        <div class="pc-flags"><span class="chip purple">2 頁</span><span class="chip coral">AI Agent</span></div>
+        <div class="pc-go">進入 損益與 AI &rarr;</div>
       </a>
       
       <a class="part-card c4" href="#p4-1">
         <div class="pc-eyebrow">PART 4</div>
-        <h2>2027~2029 損益與治理機制</h2>
-        <p>新增 2027~2029 三年營業計算損益表（三年累計營收 8.4 億 / 淨利 8,400 萬）、人力入 COGS、待補列支出與動態復盤治理。</p>
-        <div class="pc-flags"><span class="chip coral">3 頁</span><span class="chip green">2027~2029損益</span><span class="chip blue">動態復盤</span></div>
-        <div class="pc-go">進入三年損益表 &rarr;</div>
+        <h2>參數校正與業務規則沿用</h2>
+        <p>更新四項系統動力學敏感性參數，並確立 R5.0 商業規則(DY 3.5門檻, 2%專項準備金, Master+Slave)。</p>
+        <div class="pc-flags"><span class="chip coral">2 頁</span><span class="chip blue">動態參數</span></div>
+        <div class="pc-go">進入 參數與規則 &rarr;</div>
       </a>
 
       <a class="part-card c5" href="#p5-1">
         <div class="pc-eyebrow">PART 5</div>
-        <h2>敏感性分析互動模擬器</h2>
-        <p>以 1.2 億營收、25MW/人、25% 毛利為基線之動態模擬器，調控容量、單案規模、服務佔比，即時檢視邊界與人力負荷。</p>
-        <div class="pc-flags"><span class="chip green">1 頁</span><span class="chip amber">動態調控</span><span class="chip teal">即時損益</span></div>
-        <div class="pc-go">進入互動模擬器 &rarr;</div>
+        <h2>假設、里程碑與動態模擬器</h2>
+        <p>列管人均承載與簽約口徑等關鍵假設，明確14項里程碑，並提供互動模擬器供決策即時調控。</p>
+        <div class="pc-flags"><span class="chip green">3 頁</span><span class="chip teal">互動模擬</span></div>
+        <div class="pc-go">進入 假設與模擬器 &rarr;</div>
       </a>
     </div>
 
     <!-- Quick Spec Grid -->
     <div class="quick-spec-grid">
       <div class="metric blue">
-        <div class="k">1.20億</div>
-        <div class="t">FY2027 營業收入目標 (服務 8,400萬 / 工程 3,600萬)</div>
+        <div class="k">1.5 億</div>
+        <div class="t">FY2027 年度簽約目標 (業務開發指標)</div>
       </div>
       <div class="metric teal">
-        <div class="k">25.0%</div>
-        <div class="t">目標毛利率 (毛利 3,000萬，成本率 75%)</div>
+        <div class="k">1.0 億</div>
+        <div class="t">FY2027 年度營收認列 (下修後收斂缺口)</div>
       </div>
       <div class="metric amber">
-        <div class="k">25 MW/人</div>
-        <div class="t">人均承載計算基準 (11人承載 264MW)</div>
+        <div class="k">7 : 3</div>
+        <div class="t">營收結構：服務佔 70% / 工程佔 30%</div>
       </div>
       <div class="metric green">
-        <div class="k">1,200萬</div>
-        <div class="t">FY2027 稅前淨利目標 (雙層費用後淨利率 10.0%)</div>
-      </div>
-      <div class="metric coral">
-        <div class="k">8.40億</div>
-        <div class="t">2027~2029 三年累計營收 (累計稅前淨利 8,400萬)</div>
+        <div class="k">≥ 95%</div>
+        <div class="t">光伏維運營收占比 (非光伏上限 500 萬)</div>
       </div>
       <div class="metric purple">
-        <div class="k">DY ≥ 3.5</div>
-        <div class="t">接單臨界發電量 (kWh/kWp/day，向南部集中)</div>
+        <div class="k">AI Agent</div>
+        <div class="t">第三項必達目標：自動化與工程機會辨識</div>
+      </div>
+      <div class="metric coral">
+        <div class="k">12.0%</div>
+        <div class="t">建議稅前淨利率目標 (釋出 430萬預算)</div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ================= PART 1: R5.0 變更與三大決策定案 ================= -->
+<!-- ================= PART 1: 目標定案與爭議化解 ================= -->
 <div class="view" id="view-p1">
   <!-- Slide 1.1 -->
   <section class="slide">
     <div class="slide-header">
       <div>
-        <div class="eyebrow">Part 1 ‧ R5.0 變更與三大決策定案 1.1</div>
-        <h1>本版變更摘要 (R4.0 vs R5.0)</h1>
-        <p class="sub">依據 2026-09-10 FY2027 營運計畫會議與系統動力學模型校正，確立最新版本基準。</p>
+        <div class="eyebrow">Part 1 ‧ 目標定案與爭議化解 1.1</div>
+        <h1>FY2027 必達目標（定案）</h1>
+        <p class="sub">確立簽約與營收的「雙指標」，並確認服務與工程之黃金佔比，收斂至參數微調可達區間。</p>
       </div>
-      <div class="flags"><span class="flag teal">重大升級</span><span class="flag blue">決策定案</span></div>
+      <div class="flags"><span class="flag teal">戰略定調</span><span class="flag blue">雙指標</span></div>
     </div>
     <div class="slide-body">
       <div class="table-wrap">
         <table>
           <thead>
-            <tr><th>#</th><th>核心項目</th><th>R4.0 基準</th><th>R5.0 營運損益定案版</th><th>決策定案與依據</th></tr>
+            <tr><th>#</th><th>目標項目</th><th>數值與標準</th><th>性質與定義</th></tr>
           </thead>
           <tbody>
-            <tr class="good-row"><td>1</td><td><b>FY2027 營收定義</b></td><td>1.2 億（未細分）</td><td><b>確立為「認列營業收入 1.20 億元」</b>（服務 8,400萬 70% / 工程 3,600萬 30%）</td><td><b>【定案確認】</b></td></tr>
-            <tr class="good-row"><td>2</td><td><b>人均承載標準</b></td><td>未明確（20~25MW）</td><td><b>確定以「25.0 MW/人」作為交付與人力計算基準</b></td><td><b>【定案確認】</b></td></tr>
-            <tr class="good-row"><td>3</td><td><b>毛利計算基準</b></td><td>25% 靜態假設</td><td><b>維持「25.0% 毛利率」穩健基準</b>（營業成本 75%，淨利率 10.0%）</td><td><b>【定案確認】</b></td></tr>
-            <tr class="hl-row"><td>4</td><td><b>規劃工具</b></td><td>靜態損益表</td><td><b>系統動力學月度模型（12 項敏感性參數＋超載自我限制迴路）</b></td><td>Excel 模型</td></tr>
-            <tr><td>5</td><td><b>DY 定義確認</b></td><td>未確認（原推測為達成率）</td><td><b>日均發電量（kWh/kWp/day）；全案型門檻 DY ≥ 3.5</b></td><td>會議定案</td></tr>
-            <tr><td>6</td><td><b>PR 責任歸屬</b></td><td>三情境概念</td><td><b>外部案場僅作 KPI；自有 EPC 案由工程端保證，維運僅負機況+髒污</b></td><td>會議定案</td></tr>
-            <tr><td>7</td><td><b>專項修繕準備金</b></td><td>無</td><td><b>自維運服務營收提列 2%（FY2027 約 168萬/年）作為專項修繕資金</b></td><td>會議新增</td></tr>
-            <tr><td>8</td><td><b>區域成本量化</b></td><td>定性描述（南部偏高）</td><td><b>量化指標：北 5,000／中 7,000／南 9,000 元/案/月（南部絕對毛利最高）</b></td><td>會議量化</td></tr>
-            <tr><td>9</td><td><b>人力成本歸屬</b></td><td>未確認</td><td><b>維運人員成本全數計入專案成本 (COGS)，不計總部 OPEX</b></td><td>會議釐清</td></tr>
-            <tr class="bad-row"><td>10</td><td><b>合約管控機制</b></td><td>未定</td><td><b>工程與維運強制拆分為兩份獨立合約，禁止內嵌</b></td><td>會議決議</td></tr>
-            <tr><td>11</td><td><b>技術投資聚焦</b></td><td>廣泛評估</td><td><b>僅聚焦 AI 與機器人，其餘不具直接高回報項目暫停</b></td><td>會議決議</td></tr>
-            <tr><td>12</td><td><b>BP 動態治理</b></td><td>年度里程碑</td><td><b>每季或每半年復盤，營收未達標同步縮減對應預算支出</b></td><td>會議新增</td></tr>
+            <tr class="good-row"><td><b>1</b></td><td><b>年度簽約</b></td><td><b>1.5 億元</b></td><td>業務開發成果 (BD)</td></tr>
+            <tr class="good-row"><td><b>1</b></td><td><b>年度營收</b></td><td><b>1.0 億元</b></td><td>財務認列 (BU)</td></tr>
+            <tr><td></td><td>簽約與營收落差</td><td><b>2～3 個月</b></td><td>接管處理期（優化目標）</td></tr>
+            <tr class="hl-row"><td><b>2</b></td><td><b>光伏維運營收占比</b></td><td><b>≥ 95%</b></td><td>非光伏上限 500 萬，聚焦光伏本業</td></tr>
+            <tr class="hl-row"><td><b>2</b></td><td><b>服務 : 工程比例</b></td><td><b>7 : 3</b></td><td>服務 7,000萬／工程 3,000萬</td></tr>
+            <tr class="good-row"><td><b>3</b></td><td><b>AI Agent 建置</b></td><td><b>兩大核心用途</b></td><td>流程自動化、工程機會主動辨識</td></tr>
           </tbody>
         </table>
       </div>
       <div class="two-col">
         <div class="card blue">
-          <h3>三大核心決策定案之戰略意義</h3>
+          <h3>目標拆解與結構</h3>
           <p>
-            1.2 億確立為認列營收、人均承載 25MW/人、毛利率維持 25%，為下週二向李總匯報建立了<b>無可撼動的基準共識</b>，徹底排除會議紀錄中概念混淆的風險。
+            • <b>服務（70%）：</b>簽約 10,500 萬 / 營收 7,000 萬<br>
+            • <b>工程（30%）：</b>簽約 4,500 萬 / 營收 3,000 萬<br>
+            • <b>合計：</b>簽約 15,000 萬 / 營收 10,000 萬
           </p>
         </div>
         <div class="card amber">
-          <h3>業務導向：高階維運與頭部客戶</h3>
+          <h3>目標下修之戰略意義</h3>
           <p>
-            以 25% 毛利與 10% 淨利為核心紀律，嚴格執行 DY ≥ 3.5 與 12 萬年成本淘汰線，全面放棄低價衝量代工，向國泰等優質頭部業主靠攏。
+            相較前版（R4.0／R5.0 的 1.2 億營收），本版下修營收至 1.0 億 (-16.7%)。系統動力學模型的試算值（9,292 萬）與目標差距從 -22.6% 收斂至 <b>-7.1%</b>，從「結構性不可達」轉變為「參數微調可達」。
           </p>
         </div>
       </div>
     </div>
     <div class="slide-foot">
-      <div>來源：OMPLAN R5.0 第一章 ＆ 會議關鍵決策定案</div>
+      <div>來源：OMPLAN R6.0 第一章 ＆ FY2027 必達目標定案</div>
       <div class="pageno">1.1</div>
     </div>
   </section>
@@ -184,169 +180,98 @@
   <section class="slide">
     <div class="slide-header">
       <div>
-        <div class="eyebrow">Part 1 ‧ R5.0 變更與三大決策定案 1.2</div>
-        <h1>三大核心決策定調 (阻擋定稿之爭議化解)</h1>
-        <p class="sub">下週二李總會議前三大核心爭點已全數釐清定案，計畫邏輯完全自洽，具備堅實數字基礎。</p>
+        <div class="eyebrow">Part 1 ‧ 目標定案與爭議化解 1.2</div>
+        <h1>R5.0 三項衝突的處置結果</h1>
+        <p class="sub">釐清會議紀錄混淆與試算目標落差，確保計畫邏輯完全自洽。</p>
       </div>
-      <div class="flags"><span class="flag green">三大定案全數落實</span></div>
+      <div class="flags"><span class="flag green">衝突已解</span></div>
     </div>
     <div class="slide-body">
       <div class="table-wrap">
         <table>
           <thead>
-            <tr><th>核心決策</th><th>爭點原貌與分析</th><th><b>最新定案標準</b></th><th>落實管理行動與指標</th></tr>
+            <tr><th>衝突編號</th><th>R5.0 原遺留爭點</th><th><b>R6.0 定案處置結果</b></th></tr>
           </thead>
           <tbody>
             <tr class="good-row">
-              <td><b>決策 1 (X-1)<br>1.2億營收目標</b></td>
-              <td>會議紀錄一度混淆為「簽約額」或「工程占7成/維運占3成」，若維運僅3,600萬將較FY26衰退。</td>
-              <td><b>【確認 1.2 億為認列營業收入】</b><br>維持 <b>服務 70% (8,400萬) / 工程 30% (3,600萬)</b> 之黃金結構。</td>
-              <td>由 20% 成交勝率倒推，市場端需持續儲備 6 億元項目機會點，確保 1.2 億營收如期認列。</td>
+              <td><b>X-1 營收與簽約混淆</b></td>
+              <td>1.2億是營收還是簽約？7:3 誰是 7？(會議紀錄誤記工程7成)</td>
+              <td><b>【已解】</b>確認為簽約1.5億、營收1億。<br><b>維持服務 7 成、工程 3 成</b> (導正逐字稿謬誤，與存量邏輯相符)。</td>
+            </tr>
+            <tr class="hl-row">
+              <td><b>X-2 人均承載標準</b></td>
+              <td>模型參數 25MW/人 vs 2人50案推算 20MW/人 產生落差。</td>
+              <td><b>【仍待決】</b>列為最高優先確認事項（見第五章關鍵假設）。</td>
             </tr>
             <tr class="good-row">
-              <td><b>決策 2 (X-2)<br>人均承載 25MW</b></td>
-              <td>會議 Master+Slave (2人50案，0.8MW) 換算為 20MW/人，與模型 25MW/人 產生 70MW 承載落差。</td>
-              <td><b>【確認以 25.0 MW/人 計算人力】</b><br>FY2027 總容量 264 MW 僅需配置 <b>11 位</b> 維運服務工程師。</td>
-              <td>若編制 14 人，自有承載上限達 350 MW，留出充裕彈性，足以完全覆蓋 2027 年全量案場。</td>
+              <td><b>X-3 營收缺口與獲利超標</b></td>
+              <td>原試算營收短少 22.6%、獲利卻超標 37.8% 產生背離。</td>
+              <td><b>【已解】</b>營收目標務實下修至 1 億；獲利目標同步釋放作為研發預算。</td>
             </tr>
-            <tr class="good-row">
-              <td><b>決策 3 (X-3)<br>毛利率維持 25%</b></td>
-              <td>系統動力學試算初期毛利偏高 (38.9%)，但 R4.0 保守假設為 25%，兩者目標方向存在落差。</td>
-              <td><b>【確認毛利計算仍維持 25.0%】</b><br>營業成本率 75% (9,000萬)，<b>毛利穩健達成 3,000 萬元</b>。</td>
-              <td>扣除事業部費用 10% (1,200萬) 與總部 5% (600萬) 後，<b>稅前淨利穩健達成 1,200 萬元 (10.0%)</b>。</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="two-col">
-        <div class="card green">
-          <h3>向李總匯報的定案論述</h3>
-          <p>
-            「我們以最穩健的 25% 毛利率與 75% 成本率為底線測算，FY2027 營收 1.2 億即可為集團貢獻 1,200 萬稅前淨利；若實際運維效率優化，超額利潤將作為技術與加薪儲備。」
-          </p>
-        </div>
-        <div class="card blue">
-          <h3>交付承載與組織對齊</h3>
-          <p>
-            以 25MW/人 測算，人均效率處於行業先進水準。搭配 3 次清洗與 3 次巡檢標準，現場工程師能保持最高人效，無人員冗餘包袱。
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="slide-foot">
-      <div>來源：OMPLAN R5.0 第二章 ＆ 三大決策定案清單</div>
-      <div class="pageno">1.2</div>
-    </div>
-  </section>
-
-  <!-- Slide 1.3 -->
-  <section class="slide">
-    <div class="slide-header">
-      <div>
-        <div class="eyebrow">Part 1 ‧ R5.0 變更與三大決策定案 1.3</div>
-        <h1>系統動力學 12 項敏感性參數與超載迴路</h1>
-        <p class="sub">模型依五大功能模組劃分，結合三個動態自我限制迴路，避免盲目擴張帶來的交付失控。</p>
-      </div>
-      <div class="flags"><span class="flag teal">動態控制</span><span class="flag amber">主責分工</span></div>
-    </div>
-    <div class="slide-body">
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr><th>模組類別</th><th>#</th><th>敏感性參數</th><th>基準值</th><th>單位</th><th>主責主管</th><th>低值 (-20%)</th><th>高值 (+20%)</th></tr>
-          </thead>
-          <tbody>
-            <tr><td rowspan="3"><b>業務開發</b></td><td>1</td><td>有效機會容量</td><td>500.0</td><td>MW／年</td><td>Mina</td><td>400.0</td><td>600.0</td></tr>
-            <tr><td>2</td><td>維運成交率</td><td>30.0%</td><td>%</td><td>Mina</td><td>24.0%</td><td>36.0%</td></tr>
-            <tr><td>10</td><td>案源取得成本</td><td>2.0</td><td>萬元／成交MW</td><td>Mina／David</td><td>1.6</td><td>2.4</td></tr>
-            <tr class="hl-row"><td rowspan="3"><b>收入留存</b></td><td>3</td><td>接管平均處理期</td><td>2.0</td><td>月</td><td>Mina／Evan</td><td>1.0</td><td>3.0</td></tr>
-            <tr class="hl-row"><td>4</td><td>年度基礎續約率</td><td>95.0%</td><td>%</td><td>Mina</td><td>76.0%</td><td>100.0%</td></tr>
-            <tr class="hl-row"><td>5</td><td>加權維運年費</td><td>31.8</td><td>萬元／MW年</td><td>Mina／David</td><td>25.4</td><td>38.2</td></tr>
-            <tr class="good-row"><td rowspan="2"><b>交付能力</b></td><td>6</td><td><b>人均有效承載</b></td><td><b>25.0</b></td><td><b>MW／人</b></td><td><b>Evan</b></td><td>20.0</td><td>30.0</td></tr>
-            <tr class="good-row"><td>11</td><td>維運服務人力</td><td>14.0</td><td>人</td><td>Evan</td><td>12.0</td><td>16.0</td></tr>
-            <tr><td rowspan="2"><b>成本參數</b></td><td>7</td><td>現場基礎交付單價</td><td>12.0</td><td>萬元／MW年</td><td>Evan／David</td><td>9.6</td><td>14.4</td></tr>
-            <tr><td>12</td><td>每人年度完全成本</td><td>90.0</td><td>萬元／人年</td><td>Evan／David</td><td>72.0</td><td>108.0</td></tr>
-            <tr><td rowspan="2"><b>工程業務</b></td><td>8</td><td>工程成交率</td><td>40.0%</td><td>%</td><td>Mina</td><td>32.0%</td><td>48.0%</td></tr>
-            <tr><td>9</td><td>工程毛利率</td><td>25.0%</td><td>%</td><td>Mina／Evan</td><td>20.0%</td><td>30.0%</td></tr>
           </tbody>
         </table>
       </div>
       <div class="card teal">
-        <h3>三個自我限制回饋迴路（超載保護機制）</h3>
+        <h3>X-1 的判定依據與風險排除</h3>
         <p>
-          當在管容量超過自有交付能力時，觸發三大防禦機制：<b>① 超載流失係數 (10%)</b> 提高次月客戶退約率；<b>② 超載成交折減 (20%)</b> 主動放緩接單節奏；<b>③ 超載品質成本 (2%)</b> 侵蝕利潤。<br>
-          目前 FY2027 試算之峰值未覆蓋超載率為 <b>0.0%</b>，顯示交付配置仍在安全容受區間內。
+          會議逐字稿原紀載：「1.2億年度營收目標中，工程占7成，維運占3成」。但若維運營收僅 3,600萬，將低於 FY2026 的 4,000萬實績，等同於基礎業務衰退，且換算容量 113 MW 也與現有期初 130 MW 存量矛盾。<br>
+          <b>本版正式確認：服務占 7 成、工程占 3 成，與 R4.0 及歷史實績 (67:33) 完全一致，排除重大戰略偏誤。</b>
         </p>
       </div>
     </div>
     <div class="slide-foot">
-      <div>來源：OMPLAN R5.0 第三章 系統動力學模型</div>
-      <div class="pageno">1.3</div>
+      <div>來源：OMPLAN R6.0 第二章 ＆ 三項衝突處置</div>
+      <div class="pageno">1.2</div>
     </div>
   </section>
 </div>
 
-<!-- ================= PART 2: 商業規則與接單門檻 ================= -->
+<!-- ================= PART 2: 營收缺口與容量需求 ================= -->
 <div class="view" id="view-p2">
   <!-- Slide 2.1 -->
   <section class="slide">
     <div class="slide-header">
       <div>
-        <div class="eyebrow">Part 2 ‧ 商業規則與接單門檻 2.1</div>
-        <h1>PR 保證規則定案與專項準備金</h1>
-        <p class="sub">依 EPC 歸屬切分賠付責任，明確維運責任邊界，設立 2% 修繕準備金化解接單顧慮。</p>
+        <div class="eyebrow">Part 2 ‧ 營收缺口與容量需求 2.1</div>
+        <h1>營收缺口盤點與參數優化補法</h1>
+        <p class="sub">模型自然試算營收為 9,292 萬，仍有 707 萬缺口 (-7.1%)，缺口集中在工程端，需藉 AI 補足。</p>
       </div>
-      <div class="flags"><span class="flag blue">責任切分</span><span class="flag green">準備金</span></div>
+      <div class="flags"><span class="flag amber">參數校正</span><span class="flag teal">AI賦能</span></div>
     </div>
     <div class="slide-body">
       <div class="table-wrap">
         <table>
           <thead>
-            <tr><th>案場類型</th><th>PR 保證與賠付處置規則</th><th>費用歸屬與報價處置</th><th>維運團隊權責邊界</th></tr>
+            <tr><th>業務項目</th><th>系統動力學自然試算</th><th>FY2027 目標</th><th>目前缺口與占比</th></tr>
           </thead>
           <tbody>
-            <tr>
-              <td><b>外部承接案場<br>(非自有 EPC)</b></td>
-              <td>PR 發電值<b>僅作內部管理 KPI</b>，對外<b>不做發電賠付保證</b>。</td>
-              <td>依常規維運費率 (6%~8%) 報價，不含保發風險對價。</td>
-              <td rowspan="2">
-                <b>【維運團隊承擔】：</b><br>
-                • 機況異常（逆變器故障、串列離線、斷路器跳脫）<br>
-                • 髒污清洗（清洗不足導致之發電折損）<br><br>
-                <b>【維運團隊不承擔】：</b><br>
-                • 模組自然光衰造成的發電損失<br>
-                • 系統性模組或變壓器缺陷（轉向 EPC 端追責）
-              </td>
-            </tr>
-            <tr class="hl-row">
-              <td><b>自有 EPC 承建案場</b></td>
-              <td>客戶要求之 PR 保證由 <b>EPC 工程端全權承擔賠付</b>。</td>
-              <td>保發相關風險準備金必須在 EPC 總承包報價中<b>單獨列明</b>。</td>
-            </tr>
+            <tr><td><b>服務收入</b></td><td>6,856.4 萬</td><td><b>7,000 萬</b></td><td><b>-143.6 萬 (-2.1%)</b></td></tr>
+            <tr class="hl-row"><td><b>工程收入</b></td><td>2,436.2 萬</td><td><b>3,000 萬</b></td><td><b>-563.8 萬 (-18.8%)</b></td></tr>
+            <tr class="bad-row"><td><b>總營業收入</b></td><td><b>9,292.6 萬</b></td><td><b>100,000 萬</b></td><td><b>-707.4 萬 (-7.1%)</b></td></tr>
           </tbody>
         </table>
       </div>
       <div class="two-col">
-        <div class="card teal">
-          <h3>2% 專項修繕準備金機制（新增）</h3>
+        <div class="card blue">
+          <h3>服務缺口 143.6 萬補法 (建議案)</h3>
           <p>
-            • <b>提列標準：</b>按年度維運服務收入提列 <b>2%</b>（FY2027 約 168 萬元/年）。<br>
-            • <b>專款專用：</b>專門用於案場性能強化、清洗加次與應急部件更換。<br>
-            • <b>戰略意義：</b>遇到高價值、有保發要求的訂單時，不因內部決策猶豫而錯失商機。
+            將接管平均處理期由 2.0 個月縮短至 <b>1.8 個月 (-10%)</b>。<br>
+            <b>理由：</b>此為內部流程改善，不高度依賴市場條件，且完美呼應「簽約與營收落差 2~3 個月」的戰略要求。
           </p>
         </div>
         <div class="card amber">
-          <h3>客戶篩選：向頭部梯隊集中</h3>
+          <h3>工程缺口 563.8 萬補法 (AI 聯動)</h3>
           <p>
-            • <b>拒絕低價衝量：</b>市場上有大量低價劣質客戶，接案只會陷入賠償泥淖。<br>
-            • <b>鎖定優質業主：</b>優先深耕國泰電業等具長約與信用實力之頭部業主。<br>
-            • <b>產業洞察：</b>2030 年維運格局將由前三大贏家通吃，必須卡位高階合約。
+            雙軌各提 11%：<br>
+            1. <b>工程機會密度：</b> 30.0 → <b>33.3 萬/在管MW年</b><br>
+            2. <b>工程成交率：</b> 40% → <b>44.4%</b><br>
+            <b>理由：</b>提升機會密度實質上就是 <b>AI Agent</b> 的核心任務，透過數據分析主動發掘整改機會，從被動等待轉為主動出擊。
           </p>
         </div>
       </div>
     </div>
     <div class="slide-foot">
-      <div>來源：OMPLAN R5.0 第四章 PR 保證規則定案</div>
+      <div>來源：OMPLAN R6.0 第三章 營收缺口與補法</div>
       <div class="pageno">2.1</div>
     </div>
   </section>
@@ -355,202 +280,93 @@
   <section class="slide">
     <div class="slide-header">
       <div>
-        <div class="eyebrow">Part 2 ‧ 商業規則與接單門檻 2.2</div>
-        <h1>接單門檻（DY 定義釐清與經濟性驗算）</h1>
-        <p class="sub">確認 DY 為日均發電量 (kWh/kWp/day)，設定 3.5 門檻與 12 萬年成本鐵律，淘汰入不敷出小案。</p>
+        <div class="eyebrow">Part 2 ‧ 營收缺口與容量需求 2.2</div>
+        <h1>簽約 1.5 億的容量需求 (TCV vs ACV)</h1>
+        <p class="sub">10,500萬服務簽約目標高度取決於合約年期定義，確認應以 3 年期 TCV 計算方具可行性。</p>
       </div>
-      <div class="flags"><span class="flag coral">DY ≥ 3.5</span><span class="flag amber">成本門檻</span></div>
+      <div class="flags"><span class="flag coral">合約口徑</span><span class="flag blue">TCV認列</span></div>
     </div>
     <div class="slide-body">
       <div class="table-wrap">
         <table>
           <thead>
-            <tr><th>案場類別</th><th>接單門檻規定</th><th>財務邏輯與執行說明</th></tr>
+            <tr><th>合約年期定義</th><th>年約值 (ACV)</th><th>需新簽新增容量</th><th>對照目前 150 MW 擴張產能</th></tr>
           </thead>
           <tbody>
-            <tr>
-              <td><b>三型案場（一般型）</b></td>
-              <td>維運收費佔年發電收入比例 <b>&lt; 6% 原則不接</b></td>
-              <td>避免淪為僅做基礎代工的低端服務商，偏離高階維運戰略。</td>
-            </tr>
-            <tr class="hl-row">
-              <td><b>1MW 以上大型異形案場</b></td>
-              <td>採<b>成本法定價</b>，維運收費佔比<b>不得低於 25%</b></td>
-              <td>異形與高壓案場巡檢複雜度高，不適用小案常規收益率，強制以成本外加定價。</td>
-            </tr>
-            <tr class="bad-row">
-              <td><b>全案型門檻 (DY)</b></td>
-              <td><b>DY &lt; 3.5 kWh/kWp/day 不予承接</b></td>
-              <td>DY 確認為日發電度數。北部 (2.8~3.0) 與多數中部案場發電低，6% 收入難以打平。</td>
-            </tr>
-            <tr>
-              <td><b>單案人工成本淘汰線</b></td>
-              <td><b>單案年人工攤提成本 12 萬元</b>（1萬/月）</td>
-              <td>無法覆蓋 12 萬成本者直接篩掉；即便是統一、大成等大客戶的小案亦不妥協承接。</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr><th>DY 值</th><th>年日照水準</th><th>年售電收入 (0.8MW)</th><th>6% 維運年費</th><th>減單案成本 12萬</th><th>單案毛利率</th><th>承接判定</th></tr>
-          </thead>
-          <tbody>
-            <tr class="bad-row"><td>2.5</td><td>偏低日照</td><td>313.9 萬</td><td>18.8 萬</td><td>6.8 萬</td><td>36%</td><td>❌ <b>直接排除</b></td></tr>
-            <tr class="bad-row"><td>2.9</td><td>北部典型水準</td><td>364.1 萬</td><td>21.8 萬</td><td>9.8 萬</td><td>45%</td><td>❌ <b>低於門檻 (不接)</b></td></tr>
-            <tr class="bad-row"><td>3.0</td><td>中部偏北典型</td><td>376.7 萬</td><td>22.6 萬</td><td>10.6 萬</td><td>47%</td><td>❌ <b>低於門檻 (不接)</b></td></tr>
-            <tr class="hl-row"><td><b>3.5</b></td><td><b>接單臨界標準</b></td><td><b>439.5 萬</b></td><td><b>26.4 萬</b></td><td><b>14.4 萬</b></td><td><b>54%</b></td><td>✅ <b>最低可承接門檻</b></td></tr>
-            <tr class="good-row"><td>3.8</td><td>南部典型水準</td><td>477.1 萬</td><td>28.6 萬</td><td>16.6 萬</td><td>58%</td><td>✅ <b>正常承接</b></td></tr>
-            <tr class="good-row"><td>4.0</td><td>南部優良案場</td><td>502.2 萬</td><td>30.1 萬</td><td>18.1 萬</td><td>60%</td><td>✅ <b>優先爭取</b></td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div class="slide-foot">
-      <div>來源：OMPLAN R5.0 第五章 接單門檻（DY 定義已釐清）</div>
-      <div class="pageno">2.2</div>
-    </div>
-  </section>
-
-  <!-- Slide 2.3 -->
-  <section class="slide">
-    <div class="slide-header">
-      <div>
-        <div class="eyebrow">Part 2 ‧ 商業規則與接單門檻 2.3</div>
-        <h1>區域成本量化與向南拓展策略</h1>
-        <p class="sub">南部人力成本高出北部 80%，但單案絕對毛利最高，化解「南部成本高卻為主戰場」之表面矛盾。</p>
-      </div>
-      <div class="flags"><span class="flag teal">區域料號</span><span class="flag blue">向南拓展</span></div>
-    </div>
-    <div class="slide-body">
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr><th>區域</th><th>單案月均人力成本</th><th>年化人力成本</th><th>典型 DY</th><th>年售電 (0.8MW)</th><th>6% 維運收入</th><th><b>單案絕對毛利</b></th><th>毛利率</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><b>北部 (桃竹苗)</b></td>
-              <td>約 5,000 元/月</td>
-              <td>6.0 萬元/年</td>
-              <td>2.9</td>
-              <td>364.1 萬</td>
-              <td>21.8 萬</td>
-              <td><b>15.8 萬元</b></td>
-              <td><b>73%</b></td>
-            </tr>
-            <tr>
-              <td><b>中部 (中彰雲)</b></td>
-              <td>約 7,000 元/月</td>
-              <td>8.4 萬元/年</td>
-              <td>3.2</td>
-              <td>401.8 萬</td>
-              <td>24.1 萬</td>
-              <td><b>15.7 萬元</b></td>
-              <td><b>65%</b></td>
-            </tr>
-            <tr class="good-row">
-              <td><b>南部 (嘉南高屏)</b></td>
-              <td>約 9,000 元/月 (+80%)</td>
-              <td>10.8 萬元/年</td>
-              <td>3.8</td>
-              <td>477.1 萬</td>
-              <td>28.6 萬</td>
-              <td><b>17.8 萬元 (+13%)</b></td>
-              <td><b>62%</b></td>
-            </tr>
+            <tr class="bad-row"><td><b>1 年 (即 ACV)</b></td><td>10,500 萬</td><td><b>330 MW</b></td><td>❌ 短少 180 MW (幾乎不可能達成)</td></tr>
+            <tr><td><b>2 年期合約</b></td><td>5,250 萬</td><td><b>165 MW</b></td><td>❌ 短少 15 MW (需極致發揮)</td></tr>
+            <tr class="good-row"><td><b>3 年期合約 (TCV)</b></td><td><b>3,500 萬</b></td><td><b>110 MW</b></td><td>✅ <b>超標 40 MW (現有參數足可達成)</b></td></tr>
+            <tr><td><b>5 年期合約</b></td><td>2,100 萬</td><td><b>66 MW</b></td><td>✅ 超標 84 MW (業務目標過低)</td></tr>
           </tbody>
         </table>
       </div>
       <div class="two-col">
-        <div class="card green">
-          <h3>向南拓展的正確策略論述</h3>
+        <div class="card teal">
+          <h3>若採 ACV 解讀的毀滅性影響</h3>
           <p>
-            • <b>絕對毛利更高：</b>南部單案絕對毛利達 17.8 萬，高於北部的 15.8 萬 (+13%)，對集團營收與利潤總量貢獻最大。<br>
-            • <b>DY 門檻唯一解：</b>DY ≥ 3.5 門檻下，北部幾乎無案可接，唯有南部案場普遍達 3.8 以上。<br>
-            • <b>拓展論述矯正：</b>向李總匯報時，切勿稱「南部成本低」，應強調「南部發電量高帶動高絕對利潤」。
+            若 1.5 億為年度合約值 (ACV)，則需新簽 330 MW，必須將有效機會容量由 500 MW 暴增至 1,100 MW，或將成交率由 30% 暴增至 66%。兩者皆遠超市場現實，<b>故「簽約 1.5 億」必定為多年期總合約價值 (TCV)。</b>
           </p>
         </div>
-        <div class="card blue">
-          <h3>各區據點與辦公室整併決策</h3>
+        <div class="card amber">
+          <h3>待確認之 KPI 口徑</h3>
           <p>
-            • <b>北部策略 (20%)：</b>僅保留必要編制維持既有案場運作，不主動開拓新案；<b>保留西湖辦公室</b>，不遷往大成。<br>
-            • <b>中部策略 (30%)：</b>彰化辦公室月租 3 萬 (年租 36 萬)，精簡外站開銷，重點補齊雲林/彰化協力商。<br>
-            • <b>財務料號精準化：</b>後續按北/中/南建置獨立人工費用料號，精確核算單案毛利。
+            • 服務合約的標準年期是 2 年還是 3 年？<br>
+            • BD 的 1.5 億目標簽約金額，是否混計了工程的一次性簽約 (4,500萬)？<br>
+            <b>後續行動：</b>立即確認服務合約標準年期與認列方式，確保業務開發目標不失真。
           </p>
         </div>
       </div>
     </div>
     <div class="slide-foot">
-      <div>來源：OMPLAN R5.0 第六章 區域成本與地理策略</div>
-      <div class="pageno">2.3</div>
+      <div>來源：OMPLAN R6.0 第四章 簽約 1.5 億的容量需求</div>
+      <div class="pageno">2.2</div>
     </div>
   </section>
 </div>
 
-<!-- ================= PART 3: 人力組織與合約管控 ================= -->
+<!-- ================= PART 3: 損益推算與 AI Agent ================= -->
 <div class="view" id="view-p3">
   <!-- Slide 3.1 -->
   <section class="slide">
     <div class="slide-header">
       <div>
-        <div class="eyebrow">Part 3 ‧ 人力組織與合約管控 3.1</div>
-        <h1>Master + Slave 作業模式與產能工時驗算</h1>
-        <p class="sub">落實厲總提出之 2人/組 負責 50 案場模式，年產能 400 案次，保留 25% 餘裕應對突發故障。</p>
+        <div class="eyebrow">Part 3 ‧ 損益推算與 AI Agent 3.1</div>
+        <h1>FY2027 損益推算與預算釋出</h1>
+        <p class="sub">以 1 億營收與 38.9% 毛利基礎推算，建議設定 12% 淨利率目標，為 AI 與戰情室釋放充足預算。</p>
       </div>
-      <div class="flags"><span class="flag purple">人效最大化</span><span class="flag teal">25案/人</span></div>
+      <div class="flags"><span class="flag green">12%淨利</span><span class="flag purple">430萬預算</span></div>
     </div>
     <div class="slide-body">
       <div class="table-wrap">
         <table>
           <thead>
-            <tr><th>編制角色</th><th>人力組合</th><th>責任案場數</th><th>換算人均承載</th><th>年度工作日</th><th>日均作業量</th><th>每組年產能</th></tr>
+            <tr><th>損益項目</th><th>金額 (萬元)</th><th>佔營收 %</th><th>備註與調整項目</th></tr>
           </thead>
           <tbody>
-            <tr class="hl-row">
-              <td><b>基本作業單元</b></td>
-              <td><b>資深工程師 (Master)<br>＋ 初級助理 (Slave)</b></td>
-              <td><b>50 案場 / 組</b></td>
-              <td><b>25 案 / 人<br>(約 20~25 MW/人)</b></td>
-              <td>200 工作日 / 年</td>
-              <td>2 個案場 / 日<br>(巡檢＋清洗)</td>
-              <td><b>400 案次 / 年</b></td>
-            </tr>
+            <tr><td><b>營業收入</b></td><td><b>10,000 萬</b></td><td>100.0%</td><td>本版定案新基準</td></tr>
+            <tr><td>毛利</td><td>3,890 萬</td><td>38.9%</td><td>系統動力學試算值</td></tr>
+            <tr><td>─ 案源取得費與部門費用</td><td>(1,500 萬)</td><td>-15.0%</td><td>固定 1,200萬 + 案源 300萬</td></tr>
+            <tr><td>─ 公司分攤費用</td><td>(500 萬)</td><td>-5.0%</td><td>固定 5%</td></tr>
+            <tr class="hl-row"><td><b>─ 補列：PR準備金與全員加薪</b></td><td><b>(260 萬)</b></td><td><b>-2.6%</b></td><td>準備金 140萬 + 加薪 120萬</td></tr>
+            <tr class="good-row"><td><b>調整後稅前淨利</b></td><td><b>1,630 萬</b></td><td><b>16.3%</b></td><td>已扣除所有已知成本</td></tr>
           </tbody>
         </table>
       </div>
       <div class="table-wrap">
         <table>
           <thead>
-            <tr><th>年度清洗頻次</th><th>清洗耗用案次</th><th>年度巡檢頻次</th><th>巡檢耗用案次</th><th>合計固定案次</th><th>年產能餘裕 (400案次基準)</th><th>應急與排障餘裕評估</th></tr>
+            <tr><th>決策：稅前淨利率目標</th><th>對應要求淨利</th><th><b>可釋出 AI Agent 與戰情室預算</b></th><th>戰略評估</th></tr>
           </thead>
           <tbody>
-            <tr><td>3 次 / 年 (避開雨季)</td><td>150 案次</td><td>2 次 / 年</td><td>100 案次</td><td>250 案次</td><td><b>150 案次 (38%)</b></td><td>充裕，但巡檢密度稍低</td></tr>
-            <tr class="good-row">
-              <td><b>3 次 / 年 (避開雨季)</b></td>
-              <td><b>150 案次</b></td>
-              <td><b>3 次 / 年</b></td>
-              <td><b>150 案次</b></td>
-              <td><b>300 案次</b></td>
-              <td><b>100 案次 (25%)</b></td>
-              <td><b>✅ 最佳平衡配置：保留 25% 工時排障</b></td>
-            </tr>
-            <tr><td>3 次 / 年 (避開雨季)</td><td>150 案次</td><td>4 次 / 年</td><td>200 案次</td><td>350 案次</td><td>50 案次 (12%)</td><td>吃緊，突發異常恐致工期延誤</td></tr>
-            <tr class="bad-row"><td>3 次 / 年 (避開雨季)</td><td>150 案次</td><td>5 次 / 年</td><td>250 案次</td><td>400 案次</td><td>0 案次 (0%)</td><td>❌ 無餘裕，人力極度緊繃</td></tr>
+            <tr><td>10.0% (原保守目標)</td><td>1,000 萬</td><td><b>630 萬</b></td><td>預算過剩，在 38.9% 高毛利下顯得保守。</td></tr>
+            <tr class="hl-row"><td><b>12.0% (R6.0 建議目標)</b></td><td><b>1,200 萬</b></td><td><b>430 萬</b></td><td>✅ <b>既高於原目標，又留出足夠能力建設資源。</b></td></tr>
+            <tr class="bad-row"><td>15.0% (高標)</td><td>1,500 萬</td><td><b>130 萬</b></td><td>❌ 預算嚴重被擠壓，不足以發包建置 AI 平台。</td></tr>
           </tbody>
         </table>
       </div>
-      <div class="card purple">
-        <h3>產能配置與 25 MW/人 承載標準融合</h3>
-        <p>
-          人均承載確定以 <b>25 MW/人</b> 計算，FY2027 總容量 264 MW 僅需 11 位服務工程師（配置 5.5 組 Master+Slave）。<br>
-          若維持編制 14 人（7組），自有交付極限達 350 MW（350案），完全涵蓋 FY2027 的 331 案需求，工時餘裕達 25%，確保現場維運品質無虞。
-        </p>
-      </div>
     </div>
     <div class="slide-foot">
-      <div>來源：OMPLAN R5.0 第七章 人力配置：Master + Slave 模式</div>
+      <div>來源：OMPLAN R6.0 第五章 損益推算</div>
       <div class="pageno">3.1</div>
     </div>
   </section>
@@ -559,258 +375,97 @@
   <section class="slide">
     <div class="slide-header">
       <div>
-        <div class="eyebrow">Part 3 ‧ 人力組織與合約管控 3.2</div>
-        <h1>團隊加薪留才、雙通道晉升與現場賦能</h1>
-        <p class="sub">爆發前優先以實質薪資留住核心人才，結合 AI Agent 智慧分派與戰情室提升現場反應效率。</p>
+        <div class="eyebrow">Part 3 ‧ 損益推算與 AI Agent 3.2</div>
+        <h1>AI Agent 兩大用途與建置戰略</h1>
+        <p class="sub">確認 AI Agent 解決兩大核心痛點，不僅是技術名詞，更是支撐人效與填補工程缺口的關鍵武器。</p>
       </div>
-      <div class="flags"><span class="flag amber">加薪留才</span><span class="flag blue">AI賦能</span></div>
+      <div class="flags"><span class="flag coral">AI Agent</span><span class="flag blue">工程機會辨識</span></div>
     </div>
     <div class="slide-body">
       <div class="table-wrap">
         <table>
           <thead>
-            <tr><th>激勵與晉升維度</th><th>具體措施與執行標準</th><th>管理價值與財務評估</th></tr>
+            <tr><th>核心用途</th><th>涵蓋模組</th><th>對應之商業目標與連動效益</th></tr>
           </thead>
           <tbody>
             <tr class="hl-row">
-              <td><b>全員調薪策略<br>(代替過早發獎金)</b></td>
-              <td>在營收規模尚未大爆發前，暫不推行全員浮動獎金，<b>優先以加薪 5,000 元/月 網住核心人才</b>。</td>
-              <td>20 人團隊每人月調 5k，年總支出僅 <b>120 萬元</b>，投產比遠高於過早推行考核獎金。</td>
+              <td><b>1. 數據收集與分析</b></td>
+              <td>• 案場數據統合 (基礎)<br>• <b>工程機會主動辨識</b> (應用)</td>
+              <td><b>【補足 564 萬工程缺口】</b><br>從被動等報修轉為主動發掘整改機會，將工程機會密度從 30 萬推升至 33.3 萬/MW。</td>
             </tr>
             <tr>
-              <td><b>技術雙通道晉升</b></td>
-              <td>• <b>節點一：</b>普通工程師 晉升為「資深三型維運工程師」時加薪。<br>• <b>節點二：</b>晉升為「可獨立負責 1MW 以上大型案場之專案工程師」再次調薪。</td>
-              <td>建立內部良性發展路徑，避免高薪從外部挖角 AM 人才後因文化適應不良快速流失。</td>
-            </tr>
-            <tr>
-              <td><b>人員內部流動機制</b></td>
-              <td>資深人員手上之小型三型案場逐步轉交初級助理（如釋放阿超 10 個案場）。</td>
-              <td>釋放高階技術人力，專職負責高單價整改、變壓器大修與 SD 工程訂單。</td>
+              <td><b>2. 標準重複流程自動化</b></td>
+              <td>• 異常告警自動過濾派單<br>• 處置方案與報告自動產出</td>
+              <td><b>【支撐 25MW 高人均承載】</b><br>釋放後勤與現場工時，確保 Master+Slave (2人50案) 不因行政流程崩潰。</td>
             </tr>
           </tbody>
         </table>
       </div>
       <div class="two-col">
-        <div class="card blue">
-          <h3>現場運維效率賦能</h3>
+        <div class="card purple">
+          <h3>戰情室與 AI 之優先順序</h3>
           <p>
-            • <b>現場小組長機制：</b>設置類似阿巴角色，在 300 案場突發連鎖告警時，快速篩選出 A/B/C 三級應急方案。<br>
-            • <b>AI Agent 工具導入：</b>替換傳統老舊監控，實現異常自動派單與工單初稿生成，逐步縮編後勤冗員。<br>
-            • <b>專屬維運戰情室：</b>2027 年前建置雙大螢幕戰情中心，實現全量案場營運指標視覺化。
+            1. <b>營運數字收集：</b> 無數據則無分析，建立單一源。<br>
+            2. <b>工程機會辨識：</b> 最快產生營收 (補足工程缺口)。<br>
+            3. <b>告警自動派單：</b> 緩解人均承載壓力。<br>
+            4. <b>報告自動產出：</b> 釋出後勤工時。<br>
+            5. <b>戰情室視覺化：</b> 2027 年前上線 (兩塊大屏)。
           </p>
         </div>
         <div class="card amber">
-          <h3>技術投資邊界限縮</h3>
+          <h3>待核定之執行細節</h3>
           <p>
-            • <b>聚焦高回報技術：</b>後續技術研發資源<b>僅聚焦 AI 與清洗機器人</b>兩個方向。<br>
-            • <b>暫停無效研發：</b>所有無法直接產生高營收、高毛利的技術試驗項目全部暫停。<br>
-            • <b>清洗效益標準化：</b>按每年 3 次行業慣例執行，無需浪費人力進行清洗效益數據驗證。
+            技術規格、架構、自建或外包方式、與既有傳統監控平台的替換路徑，均需於 Q4 提出具體建置計畫書。建議於 <b>430 萬</b> 預算天花板內規劃。
           </p>
         </div>
       </div>
     </div>
     <div class="slide-foot">
-      <div>來源：OMPLAN R5.0 第七章 人力配置 ＆ 第十三章 治理機制</div>
+      <div>來源：OMPLAN R6.0 第六章 AI Agent 建置</div>
       <div class="pageno">3.2</div>
-    </div>
-  </section>
-
-  <!-- Slide 3.3 -->
-  <section class="slide">
-    <div class="slide-header">
-      <div>
-        <div class="eyebrow">Part 3 ‧ 人力組織與合約管控 3.3</div>
-        <h1>合約管控機制：工程與維運合約強制拆分</h1>
-        <p class="sub">全面杜絕工程合約內嵌維運條款，落實結案會議監管，徹底清理歷史遺留專案成本。</p>
-      </div>
-      <div class="flags"><span class="flag coral">制度防弊</span><span class="flag teal">合約拆分</span></div>
-    </div>
-    <div class="slide-body">
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr><th>管控模組</th><th>執行規定與管控標準</th><th>權責主管與防弊機制</th></tr>
-          </thead>
-          <tbody>
-            <tr class="bad-row">
-              <td><b>合約獨立強制拆分</b></td>
-              <td>全公司所有業務項目統一將<b>工程合約與維運合約拆分為兩份獨立合約</b>。嚴禁將維運服務偷偷內嵌於工程合約中。</td>
-              <td>從業務起頭阻斷「工程讓利、維運倒貼」之模糊空間。</td>
-            </tr>
-            <tr class="hl-row">
-              <td><b>結案會議維運實質監督</b></td>
-              <td>維運代表（阿杰）全程實質參與所有工程結案會議；若非純保固項目，必須經過維運簽核確認。</td>
-              <td>若發現工程暗藏維運責任，<b>強制啟動內部維運訂單，直接自對應業務人員獎金扣除成本</b>。</td>
-            </tr>
-            <tr>
-              <td><b>工程餘料即時折讓清退</b></td>
-              <td>工程結案驗收當天，必須同步完成工區剩餘物料盤點與清退，直接折價售予下游分包商。</td>
-              <td>嚴禁餘料堆置庫房或轉嫁維運承擔，杜絕庫存資金積壓。</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr><th>歷史遺留案件</th><th>合約瑕疵與現況</th><th>R5.0 決議處理方案</th><th>執行預期效果</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><b>方生、方德東和</b></td>
-              <td>已簽署維運合約，但高壓保養等關鍵權責邊界未載明，導致維運實質倒貼。</td>
-              <td>透過<b>完善 ISO 標準作業文件補全條款</b>，將遺漏之高壓設備巡檢及維護費用追加列入收費清單。</td>
-              <td>轉被動為合法合規追加收費，弭平維運虧損。</td>
-            </tr>
-            <tr class="hl-row">
-              <td><b>南亞、億升</b></td>
-              <td>當初工程簽約時未單獨簽署維運合約，長期由維運團隊無償提供保固支援。</td>
-              <td><b>直接從工程業務之專案保護金中全額扣除</b>對應的維運派工人事與料件成本。</td>
-              <td>專案利益真實還原，還給維運 BU 公道損益。</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div class="slide-foot">
-      <div>來源：OMPLAN R5.0 第十章 合約管控規則</div>
-      <div class="pageno">3.3</div>
     </div>
   </section>
 </div>
 
-<!-- ================= PART 4: 2027~2029 損益與治理機制 ================= -->
+<!-- ================= PART 4: 參數校正與業務規則 ================= -->
 <div class="view" id="view-p4">
   <!-- Slide 4.1 -->
   <section class="slide">
     <div class="slide-header">
       <div>
-        <div class="eyebrow">Part 4 ‧ 2027~2029 損益與治理機制 4.1</div>
-        <h1>2027 ~ 2029 三年營業計算損益表</h1>
-        <p class="sub">確認 FY2027 營收 1.20 億元、毛利率 25.0%、雙層費用結構，建立三年期滾動損益規劃總表。</p>
+        <div class="eyebrow">Part 4 ‧ 參數校正與業務規則 4.1</div>
+        <h1>12 項敏感性參數與 R6.0 校正目標</h1>
+        <p class="sub">為了達成 1.0 億營收與 12% 淨利，四項關鍵參數必須進行校正。</p>
       </div>
-      <div class="flags"><span class="flag green">毛利25%確認</span><span class="flag blue">1.2億營收確認</span></div>
+      <div class="flags"><span class="flag teal">參數校正</span></div>
     </div>
     <div class="slide-body">
       <div class="table-wrap">
         <table>
           <thead>
-            <tr>
-              <th>損益項目（單位：萬元）</th>
-              <th class="ctr">% 營收</th>
-              <th class="num">FY2027 (確認)</th>
-              <th class="num">FY2028</th>
-              <th class="num">FY2029</th>
-              <th class="num">三年累計 (2027-29)</th>
-              <th class="num">四年累計 (含FY26)</th>
-            </tr>
+            <tr><th>類別</th><th>敏感性參數</th><th>Excel 原目前值</th><th><b>R6.0 校正目標</b></th><th>主責</th></tr>
           </thead>
           <tbody>
-            <tr>
-              <td>── 維運服務收入</td>
-              <td class="ctr">70%</td>
-              <td class="num">8,400 萬</td>
-              <td class="num">16,800 萬</td>
-              <td class="num">33,600 萬</td>
-              <td class="num"><b>58,800 萬</b></td>
-              <td class="num">62,800 萬</td>
-            </tr>
-            <tr>
-              <td>── 維運工程收入</td>
-              <td class="ctr">30%</td>
-              <td class="num">3,600 萬</td>
-              <td class="num">7,200 萬</td>
-              <td class="num">14,400 萬</td>
-              <td class="num"><b>25,200 萬</b></td>
-              <td class="num">27,200 萬</td>
-            </tr>
-            <tr class="hl-row">
-              <td><b>= 營業收入合計</b></td>
-              <td class="ctr"><b>100%</b></td>
-              <td class="num"><b>12,000 萬 (1.20億)</b></td>
-              <td class="num"><b>24,000 萬 (2.40億)</b></td>
-              <td class="num"><b>48,000 萬 (4.80億)</b></td>
-              <td class="num"><b>84,000 萬 (8.40億)</b></td>
-              <td class="num"><b>90,000 萬 (9.00億)</b></td>
-            </tr>
-            <tr>
-              <td>─ 營業成本 (COGS)</td>
-              <td class="ctr">75%</td>
-              <td class="num">(9,000 萬)</td>
-              <td class="num">(18,000 萬)</td>
-              <td class="num">(36,000 萬)</td>
-              <td class="num">(63,000 萬)</td>
-              <td class="num">(67,500 萬)</td>
-            </tr>
-            <tr class="good-row">
-              <td><b>= 毛利</b></td>
-              <td class="ctr"><b>25%</b></td>
-              <td class="num"><b>3,000 萬</b></td>
-              <td class="num"><b>6,000 萬</b></td>
-              <td class="num"><b>12,000 萬 (1.20億)</b></td>
-              <td class="num"><b>21,000 萬 (2.10億)</b></td>
-              <td class="num"><b>22,500 萬 (2.25億)</b></td>
-            </tr>
-            <tr>
-              <td>─ 營業費用（事業部固定）</td>
-              <td class="ctr">10%</td>
-              <td class="num">(1,200 萬)</td>
-              <td class="num">(2,400 萬)</td>
-              <td class="num">(4,800 萬)</td>
-              <td class="num">(8,400 萬)</td>
-              <td class="num">(9,000 萬)</td>
-            </tr>
-            <tr class="hl-row">
-              <td><b>= 事業部營業利益</b></td>
-              <td class="ctr"><b>15%</b></td>
-              <td class="num"><b>1,800 萬</b></td>
-              <td class="num"><b>3,600 萬</b></td>
-              <td class="num"><b>7,200 萬</b></td>
-              <td class="num"><b>12,600 萬 (1.26億)</b></td>
-              <td class="num"><b>13,500 萬 (1.35億)</b></td>
-            </tr>
-            <tr>
-              <td>─ 營業費用（公司總部分攤）</td>
-              <td class="ctr">5%</td>
-              <td class="num">(600 萬)</td>
-              <td class="num">(1,200 萬)</td>
-              <td class="num">(2,400 萬)</td>
-              <td class="num">(4,200 萬)</td>
-              <td class="num">(4,500 萬)</td>
-            </tr>
-            <tr class="good-row">
-              <td><b>= 稅前淨利</b></td>
-              <td class="ctr"><b>10%</b></td>
-              <td class="num"><b>1,200 萬</b></td>
-              <td class="num"><b>2,400 萬</b></td>
-              <td class="num"><b>4,800 萬</b></td>
-              <td class="num"><b>8,400 萬</b></td>
-              <td class="num"><b>9,000 萬</b></td>
-            </tr>
+            <tr><td>業務</td><td>有效機會容量 / 維運成交率</td><td>500 MW / 30%</td><td>維持 500~520 / 30%</td><td>Mina</td></tr>
+            <tr class="hl-row"><td><b>留存</b></td><td><b>接管平均處理期</b></td><td>2.0 月</td><td><b>1.8 月 (加速接管)</b></td><td>Mina / Evan</td></tr>
+            <tr><td>留存</td><td>加權維運年費 / 基礎續約率</td><td>31.8 萬 / 95%</td><td>維持不變</td><td>Mina</td></tr>
+            <tr><td>交付</td><td>人均有效承載 / 服務人力</td><td>25 MW/人 / 14 人</td><td>(X-2) 待決 / 維持</td><td>Evan</td></tr>
+            <tr class="hl-row"><td><b>成本</b></td><td><b>每人年度完全成本</b></td><td>90 萬/人年</td><td><b>96 萬 (反映加薪5千)</b></td><td>Evan / David</td></tr>
+            <tr class="hl-row"><td><b>工程</b></td><td><b>工程成交率</b></td><td>40%</td><td><b>44.4% (補缺口)</b></td><td>Mina</td></tr>
+            <tr class="hl-row"><td><b>工程</b></td><td><b>年度工程機會密度</b></td><td>30 萬/MW</td><td><b>33.3 萬/MW (AI 支撐)</b></td><td>Mina / Evan</td></tr>
           </tbody>
         </table>
       </div>
-      <div class="two-col">
-        <div class="card green">
-          <h3>2027~2029 營收與獲利翻倍節奏</h3>
-          <p>
-            • <b>營收逐年翻倍：</b>1.2 億（FY27）→ 2.4 億（FY28）→ 4.8 億（FY29），三年累計創造 <b>8.40 億元</b> 營收。<br>
-            • <b>穩健淨利產出：</b>在 25% 毛利與 10% 雙層費用下，三年為集團貢獻 <b>8,400 萬元</b> 實質稅前淨利。<br>
-            • <b>規模化里程碑：</b>FY2027 跨越「1 億元」損益平衡點，FY2029 正式叩關 5 億元頭部維運商門檻。
-          </p>
-        </div>
-        <div class="card blue">
-          <h3>工程業務高價值支撐</h3>
-          <p>
-            • <b>工程營收 (30%)：</b>FY27 3,600萬 → FY28 7,200萬 → FY29 1.44億。<br>
-            • <b>SD 訂單驅動：</b>由分析模組提前預判故障發起 SD 提案，FY29 SD 訂單達 9,640 萬，毛利率高於基礎維運。<br>
-            • <b>修繕隨案場增長：</b>以 4 萬/案 計算，隨 1,190 案場自然成長至 4,760 萬元。
-          </p>
-        </div>
+      <div class="card blue">
+        <h3>校正邏輯總結</h3>
+        <p>
+          其餘 8 項參數在 1.0 億營收目標下已具備合理餘裕，毋須強行推升至高值區間。<br>
+          接管期縮短 0.2 個月以確保首年服務認列；反映 5,000 元加薪使人均成本上升；藉由 AI 賦能推升工程機會密度與成交率，是 R6.0 達成目標的核心連動邏輯。
+        </p>
       </div>
     </div>
     <div class="slide-foot">
-      <div>來源：OMPLAN R5.0 第八章 損益結構 ＆ 2027~2029 營業計算損益表</div>
+      <div>來源：OMPLAN R6.0 第七章 12 項參數校正目標</div>
       <div class="pageno">4.1</div>
     </div>
   </section>
@@ -819,184 +474,172 @@
   <section class="slide">
     <div class="slide-header">
       <div>
-        <div class="eyebrow">Part 4 ‧ 2027~2029 損益與治理機制 4.2</div>
-        <h1>容量指標、人均承載 (25MW) 與編制推演</h1>
-        <p class="sub">以 25 MW/人 標準嚴格推演 2027~2029 年容量成長、案場數、自有工程師與外包缺口。</p>
+        <div class="eyebrow">Part 4 ‧ 參數校正與業務規則 4.2</div>
+        <h1>核心業務規則沿用 (PR、DY與人力配置)</h1>
+        <p class="sub">延續 R5.0 已拍板之商業鐵律，堅持高階維運戰略與風險隔離。</p>
       </div>
-      <div class="flags"><span class="flag amber">25 MW/人基準</span><span class="flag purple">外包規劃</span></div>
+      <div class="flags"><span class="flag blue">DY 3.5</span><span class="flag amber">2%準備金</span></div>
     </div>
     <div class="slide-body">
       <div class="table-wrap">
         <table>
           <thead>
-            <tr>
-              <th>營運規模指標</th>
-              <th class="num">FY2026 (基期)</th>
-              <th class="num">FY2027 (目標)</th>
-              <th class="num">FY2028 (擴張)</th>
-              <th class="num">FY2029 (規模化)</th>
-              <th>計算標準與策略說明</th>
-            </tr>
+            <tr><th>業務模組</th><th>核心規則與門檻</th><th>戰略執行意義</th></tr>
           </thead>
           <tbody>
+            <tr>
+              <td><b>接單門檻 (DY)</b></td>
+              <td><b>全案型門檻 DY ≥ 3.5 kWh/kWp/day</b><br>單案年人工攤提 &lt; 12 萬者不接</td>
+              <td>堅定淘汰北部日照不足或規模過小之拖累案場，專注於中南部高發電量之優質訂單。</td>
+            </tr>
             <tr class="hl-row">
-              <td><b>總在管容量</b></td>
-              <td class="num">130 MW</td>
-              <td class="num"><b>264 MW</b></td>
-              <td class="num"><b>499 MW</b></td>
-              <td class="num"><b>952 MW</b></td>
-              <td>三年容量成長 2.6 倍，年均複合增長率達 89%</td>
+              <td><b>區域戰略 (向南)</b></td>
+              <td>南部人力成本高 80% (9,000元/月)，但<b>單案絕對毛利 17.8 萬最高</b>。</td>
+              <td>化解「成本高卻為主戰場」之矛盾，向高層匯報應聚焦「絕對貢獻最高」之論述。</td>
             </tr>
             <tr>
-              <td><b>總管理案場數 (800kW)</b></td>
-              <td class="num">140 案 (實績)</td>
-              <td class="num">331 案</td>
-              <td class="num">625 案</td>
-              <td class="num">1,190 案</td>
-              <td>統一 800kW 案場基準，嚴格淘汰小於 400kW 不合格案</td>
+              <td><b>PR 賠付邊界</b></td>
+              <td>外部案場僅作 KPI；<b>自有 EPC 案由工程端承擔。</b></td>
+              <td>維運僅承擔機況異常與清洗不足，拒絕背負模組光衰等非戰之罪。</td>
+            </tr>
+            <tr>
+              <td><b>專項修繕準備金</b></td>
+              <td>每年提列服務營收之 <b>2%</b> (約 140 萬)。</td>
+              <td>建立風險緩衝墊，確保高價值/保發電合約具備實質應急能力。</td>
             </tr>
             <tr class="good-row">
-              <td><b>維運服務工程師 (25MW/人)</b></td>
-              <td class="num">15 人</td>
-              <td class="num"><b>11 人 (編制14)</b></td>
-              <td class="num"><b>20 人</b></td>
-              <td class="num"><b>20 人 (自有)</b></td>
-              <td><b>【25 MW/人 定案】：</b>FY27 11人即達標，留有 3 人餘裕</td>
-            </tr>
-            <tr>
-              <td><b>維運工程人員 (2000萬/人)</b></td>
-              <td class="num">1 人 (兼任)</td>
-              <td class="num">2 人</td>
-              <td class="num">4 人</td>
-              <td class="num">8 人</td>
-              <td>負責 30% 工程營收、大修、高壓整改與 SD 訂單落地</td>
-            </tr>
-            <tr>
-              <td><b>BU 主管與行政管理</b></td>
-              <td class="num">3 人</td>
-              <td class="num">4 人</td>
-              <td class="num">5 人</td>
-              <td class="num">6 人</td>
-              <td>固定維運事業部管理編制</td>
-            </tr>
-            <tr class="hl-row">
-              <td><b>事業部總人力合計</b></td>
-              <td class="num"><b>19 人</b></td>
-              <td class="num"><b>20 人</b></td>
-              <td class="num"><b>29 人</b></td>
-              <td class="num"><b>34 人</b></td>
-              <td>自有團隊控制在 34 人內，保持高人效</td>
-            </tr>
-            <tr class="bad-row">
-              <td><b>自有承載上限</b></td>
-              <td class="num">375 MW</td>
-              <td class="num">350 MW</td>
-              <td class="num">500 MW</td>
-              <td class="num">500 MW</td>
-              <td>以 25MW/人 計算自有團隊承載上限</td>
-            </tr>
-            <tr class="bad-row">
-              <td><b>外包需求比例</b></td>
-              <td class="num">0%</td>
-              <td class="num"><b>0% (完全自承)</b></td>
-              <td class="num"><b>0% (自有剛好)</b></td>
-              <td class="num"><b>47% (452MW 缺口)</b></td>
-              <td>FY29 超出 500MW 部分交由合格協力商執行清洗與巡檢</td>
+              <td><b>Master+Slave 模式</b></td>
+              <td>2人/組，負責 50 案場，年產能 400 案次。</td>
+              <td>年耗 300 案次 (巡檢3次+清洗3次)，保有 <b>25% 工時餘裕</b> 處理突發告警。</td>
             </tr>
           </tbody>
         </table>
       </div>
-      <div class="two-col">
-        <div class="card blue">
-          <h3>維運人力成本全入 COGS 定案</h3>
-          <p>
-            維運服務團隊 14 人之人事完全成本（約 1,260 萬）已全數計入專案營業成本 (75% COGS)，<b>不計入總部 OPEX</b>。事業部 10% 費用與公司總部 5% 費用分攤純粹為管理管銷支出，會計歸屬極為嚴謹清爽。
-          </p>
-        </div>
-        <div class="card teal">
-          <h3>2% 專項修繕準備金之財務列支</h3>
-          <p>
-            FY2027 維運服務營收 8,400 萬之 2% 為 <b>168 萬元/年</b>。直接在 25% 毛利（3,000 萬）中安排提撥，提撥後仍有 2,832 萬元毛利空間，完全在 75% 成本率的可承受範圍之內。
-          </p>
-        </div>
-      </div>
     </div>
     <div class="slide-foot">
-      <div>來源：OMPLAN R5.0 第七章 ＆ 第十一章 容量與人力推演</div>
+      <div>來源：OMPLAN R6.0 第八章 業務規則沿用</div>
       <div class="pageno">4.2</div>
-    </div>
-  </section>
-
-  <!-- Slide 4.3 -->
-  <section class="slide">
-    <div class="slide-header">
-      <div>
-        <div class="eyebrow">Part 4 ‧ 2027~2029 損益與治理機制 4.3</div>
-        <h1>關鍵假設責任矩陣與治理機制</h1>
-        <p class="sub">建立三大衝突會前定案時程，落實每季預算連動縮減機制，嚴格執行 M0~M9 里程碑 Gate。</p>
-      </div>
-      <div class="flags"><span class="flag coral">Gate機制</span><span class="flag teal">動態縮算</span></div>
-    </div>
-    <div class="slide-body">
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr><th>編號</th><th>核心假設與定案結論</th><th>主責主管</th><th>驗證行動與標準</th><th>狀態時限</th></tr>
-          </thead>
-          <tbody>
-            <tr class="good-row"><td><b>X-1</b></td><td><b>1.2億確立為認列營收 (服務70%/工程30%)</b></td><td>Mina / David</td><td>確認 1.2 億為認列營業收入，對應 6 億商機 Pipeline</td><td><b>✅ 已定案確認</b></td></tr>
-            <tr class="good-row"><td><b>X-2</b></td><td><b>人均承載確定為 25.0 MW/人</b></td><td>Evan / 阿杰</td><td>以 25MW/人 測算服務人力，FY27 11~14 人充裕交付</td><td><b>✅ 已定案確認</b></td></tr>
-            <tr class="good-row"><td><b>X-3</b></td><td><b>毛利率穩健維持 25.0% (淨利 10.0%)</b></td><td>David</td><td>營業成本率 75%，毛利 3,000 萬，稅前淨利 1,200 萬</td><td><b>✅ 已定案確認</b></td></tr>
-            <tr class="hl-row"><td><b>P-1</b></td><td><b>6% / 8% 計費基數確認</b></td><td>法務 / Mina</td><td>調閱既有 OM 合約，確認為售電收入而非建置成本</td><td><b>立即</b></td></tr>
-            <tr><td><b>A-8</b></td><td><b>DY 3.5 與地理配比調和</b></td><td>Mina / Evan</td><td>確認北部不主動拓展，資源 50% 傾斜南部優良發電案場</td><td>2026/Q4</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="two-col">
-        <div class="card coral">
-          <h3>BP 動態調整機制（核心治理）</h3>
-          <p>
-            • <b>季末動態復盤：</b>每季度或每半年嚴格復盤實際營收達成率。<br>
-            • <b>支出同步縮減：</b>若營收未達目標，<b>同步等比例縮減對應之人力與資本支出預算</b>。<br>
-            • <b>杜絕失衡風險：</b>徹底消除「年度營收僅達成 3 成，但費用全額花光」之管理漏洞。
-          </p>
-        </div>
-        <div class="card teal">
-          <h3>關鍵行動里程碑 (Gate)</h3>
-          <p>
-            • <b>M0 (會前定案)：</b>三大核心決策定案，完成向李總正式材料。<br>
-            • <b>M2 (Q4)：</b>12 項敏感性參數由示例假設全面切換為真實 Pipeline 數據。<br>
-            • <b>M4 (Q4)：</b>工程與維運合約全面強制拆分，處理歷史遺留案保護金。<br>
-            • <b>M8 (2027前)：</b>建置維運戰情室雙大螢幕，實現全量案場視覺化。
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="slide-foot">
-      <div>來源：OMPLAN R5.0 第十二章 關鍵假設 ＆ 第十三章 治理機制</div>
-      <div class="pageno">4.3</div>
     </div>
   </section>
 </div>
 
-<!-- ================= PART 5: 系統動力學互動模擬器 ================= -->
+<!-- ================= PART 5: 假設、里程碑與模擬器 ================= -->
 <div class="view" id="view-p5">
+  <!-- Slide 5.1 -->
   <section class="slide">
     <div class="slide-header">
       <div>
-        <div class="eyebrow">Part 5 ‧ 系統動力學敏感性分析 5.1</div>
-        <h1>損益參數互動模擬器 (25MW/人 ‧ 25%毛利校準版)</h1>
-        <p class="sub">以 1.2 億營收、人均承載 25MW/人、25% 毛利為基線，調控容量、單案規模與服務組合，即時檢驗獲利與人力邊界。</p>
+        <div class="eyebrow">Part 5 ‧ 假設、里程碑與動態模擬器 5.1</div>
+        <h1>關鍵假設清單與風險管理</h1>
+        <p class="sub">全面鎖定最高優先級之未決假設，以行動方案壓制營運風險。</p>
       </div>
-      <div class="flags"><span class="flag green">基準校準</span><span class="flag amber">找問題工具</span></div>
+      <div class="flags"><span class="flag coral">最高優先</span></div>
     </div>
-    <div class="slide-body" style="display:flex; gap:20px; height: 100%;">
+    <div class="slide-body">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>編號</th><th>核心假設與風險缺口</th><th>驗證行動與負責人</th><th>截止時間</th></tr>
+          </thead>
+          <tbody>
+            <tr class="bad-row">
+              <td><b>X-2</b></td>
+              <td><b>人均承載落差：模型 25MW/人 vs 實際派工 20MW/人</b> (差70MW)</td>
+              <td>Evan 確認實際可行值，若無法達 25MW 需擴編或降載</td>
+              <td>2026/Q4</td>
+            </tr>
+            <tr class="hl-row">
+              <td><b>S-1</b></td>
+              <td><b>簽約 1.5 億計算口徑 (TCV vs ACV, 合約年期)</b></td>
+              <td>Mina/David 確認服務合約標準年期與認列方式</td>
+              <td>立即</td>
+            </tr>
+            <tr>
+              <td><b>E-1</b></td>
+              <td>工程機會密度可提升 11% (30 → 33.3 萬/MW)</td>
+              <td>依賴 AI Agent 數據分析模組的實際上線效益</td>
+              <td>2027/Q2</td>
+            </tr>
+            <tr>
+              <td><b>AI-1</b></td>
+              <td>AI Agent 可在 430 萬預算內建置完成</td>
+              <td>技術規格、外包方式確認</td>
+              <td>2026/Q4</td>
+            </tr>
+            <tr>
+              <td><b>R-1</b></td>
+              <td>淨利率目標訂為 12% (決定 AI 預算)</td>
+              <td>財務與董事會確認核准</td>
+              <td>2026/Q4</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>來源：OMPLAN R6.0 第九章 關鍵假設清單</div>
+      <div class="pageno">5.1</div>
+    </div>
+  </section>
+
+  <!-- Slide 5.2 -->
+  <section class="slide">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">Part 5 ‧ 假設、里程碑與動態模擬器 5.2</div>
+        <h1>年度推動里程碑</h1>
+        <p class="sub">建立清晰的 Q4 至 2027 上半年的專案落地時間表。</p>
+      </div>
+      <div class="flags"><span class="flag green">落地排程</span></div>
+    </div>
+    <div class="slide-body">
+      <div class="two-col">
+        <div class="card teal">
+          <h3>2026 年 Q4 核心里程碑</h3>
+          <ul style="line-height:1.8; margin-left:20px; font-weight:500;">
+            <li><b>M1/M2：</b> 簽約 1.5億 KPI 口徑確認、計費基數查核 (9月)。</li>
+            <li><b>M3：</b> 人均承載參數 (X-2) 寫入模型定案。</li>
+            <li><b>M4：</b> 財務核定 12% 淨利率目標，釋放 AI 預算。</li>
+            <li><b>M5/M6：</b> AI Agent 建置計畫書核定、12 項參數全數校正。</li>
+            <li><b>M7/M8：</b> 北中南區域料號上線、工程/維運新約 100% 拆分。</li>
+            <li><b>M9/M10：</b> 2% 專項準備金動支流程上線、小案汰弱盤點。</li>
+          </ul>
+        </div>
+        <div class="card blue">
+          <h3>2027 年上半年里程碑與治理</h3>
+          <ul style="line-height:1.8; margin-left:20px; font-weight:500;">
+            <li><b>M11：</b> AI Agent 流程自動化上線 (3 個場站試點)。</li>
+            <li><b>M12：</b> AI Agent 工程機會辨識上線 (提報首批 10 件工程)。</li>
+            <li><b>M13：</b> 雙螢幕維運戰情室硬體與數據上線。</li>
+            <li><b>M14：</b> 每季執行 BP 復盤，營收若未達標，同步縮減對應預算支出。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <div>來源：OMPLAN R6.0 第十章 里程碑</div>
+      <div class="pageno">5.2</div>
+    </div>
+  </section>
+
+  <!-- Slide 5.3 (Interactive Simulator) -->
+  <section class="slide">
+    <div class="slide-header">
+      <div>
+        <div class="eyebrow">Part 5 ‧ 假設、里程碑與動態模擬器 5.3</div>
+        <h1>系統動力學：互動模擬器</h1>
+        <p class="sub">以人均 25MW、毛利 25% 為基礎，即時調控檢視 FY2027 容量擴張與規模底線。</p>
+      </div>
+      <div class="flags"><span class="flag teal">即時損益估算</span><span class="flag coral">邊界檢核</span></div>
+    </div>
+    <div class="slide-body" style="display:flex; gap:20px;">
+      
       <!-- Controls -->
-      <div class="card blue" style="flex:1; overflow-y:auto; padding:20px; display:flex; flex-direction:column; gap:14px;">
-        <h3 style="margin-bottom:2px;">敏感性參數調控區</h3>
+      <div class="card" style="flex:1; padding:20px; display:flex; flex-direction:column; gap:16px;">
+        <h3>動態參數調控盤</h3>
         
         <div>
-          <label style="display:flex; justify-content:space-between; font-size:.88rem;"><b>總在管容量 (MW)</b> <span id="val-mw" style="color:var(--teal); font-weight:800;">264</span></label>
+          <label style="display:flex; justify-content:space-between; font-size:.88rem;"><b>年度在管容量 (MW)</b> <span id="val-mw" style="color:var(--blue); font-weight:800;">264</span></label>
           <input type="range" id="input-mw" min="50" max="1000" step="10" value="264" style="width:100%; accent-color:var(--blue);">
           <small style="color:var(--muted); font-size:.72rem;">FY2027 基準 264 MW (FY28: 499MW, FY29: 952MW)</small>
         </div>
@@ -1041,15 +684,15 @@
         
         <div class="quick-spec-grid" style="grid-template-columns: 1fr 1fr 1fr; margin-bottom:4px;">
           <div class="metric blue">
-            <div class="k" id="out-rev">12,000</div>
+            <div class="k" id="out-rev">10,000</div>
             <div class="t">總營業收入 (服務+工程)</div>
           </div>
           <div class="metric teal">
-            <div class="k" id="out-gp">3,000</div>
+            <div class="k" id="out-gp">2,500</div>
             <div class="t" id="out-gp-pct">毛利 (25.0%)</div>
           </div>
           <div class="metric coral">
-            <div class="k" id="out-np">1,200</div>
+            <div class="k" id="out-np">1,000</div>
             <div class="t" id="out-np-pct">稅前淨利 (10.0%)</div>
           </div>
         </div>
@@ -1077,12 +720,12 @@
               </tr>
               <tr>
                 <td><b>營業成本 (75% COGS)</b></td>
-                <td><b id="out-cogs">9,000</b> 萬元</td>
+                <td><b id="out-cogs">7,500</b> 萬元</td>
                 <td>維運現場人力全數計入 COGS ＋ 現場交付 ＋ 修繕發包</td>
               </tr>
               <tr class="hl-row">
                 <td><b>2% 專項修繕準備金</b></td>
-                <td><b id="out-reserve">168</b> 萬元</td>
+                <td><b id="out-reserve">140</b> 萬元</td>
                 <td>按服務營收 2% 提列，為保發高價值訂單建立風險修繕儲備</td>
               </tr>
               <tr>
@@ -1105,8 +748,8 @@
       </div>
     </div>
     <div class="slide-foot">
-      <div>來源：OMPLAN R5.0 互動模擬器 ＆ 三大決策定案標準</div>
-      <div class="pageno">5.1</div>
+      <div>來源：系統動力學 互動模擬器</div>
+      <div class="pageno">5.3</div>
     </div>
   </section>
 </div>
