@@ -18,3 +18,4 @@
 - `app.js`：圖表與資料表渲染。
 - `strategy-brief.md`：整理後的文字摘要。
 - `assets/solar-om-hero.png`：網站主視覺。
+- `.mcp.json`：Lark MCP 伺服器設定，說明見 `docs/lark-mcp.md`。
